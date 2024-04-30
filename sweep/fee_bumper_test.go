@@ -104,6 +104,12 @@ func TestBumpResultValidate(t *testing.T) {
 		Event: TxPublished,
 	}
 	require.NoError(t, b.Validate())
+
+	// Tx is allowed to be nil in a TxError event.
+	b = BumpResult{
+		Event: TxError,
+	}
+	require.NoError(t, b.Validate())
 }
 
 // TestCalcSweepTxWeight checks that the weight of the sweep tx is calculated

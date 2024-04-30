@@ -84,6 +84,9 @@ const (
 	// TxConfirmed is sent when the tx is confirmed.
 	TxConfirmed
 
+	// TxError is sent when there's an error creating the tx.
+	TxError
+
 	// sentinalEvent is used to check if an event is unknown.
 	sentinalEvent
 )
@@ -99,6 +102,8 @@ func (e BumpEvent) String() string {
 		return "Replaced"
 	case TxConfirmed:
 		return "Confirmed"
+	case TxError:
+		return "Error"
 	default:
 		return "Unknown"
 	}
@@ -246,10 +251,20 @@ type BumpResult struct {
 	requestID uint64
 }
 
+// String returns a human-readable string for the result.
+func (b *BumpResult) String() string {
+	desc := fmt.Sprintf("Event=%v", b.Event)
+	if b.Tx != nil {
+		desc += fmt.Sprintf(", Tx=%v", b.Tx.TxHash())
+	}
+
+	return fmt.Sprintf("[%s]", desc)
+}
+
 // Validate validates the BumpResult so it's safe to use.
 func (b *BumpResult) Validate() error {
-	// Every result must have a tx.
-	if b.Tx == nil {
+	// Every result must have a tx except the error case.
+	if b.Tx == nil && b.Event != TxError {
 		return fmt.Errorf("%w: nil tx", ErrInvalidBumpResult)
 	}
 
@@ -654,8 +669,7 @@ func (t *TxPublisher) notifyResult(result *BumpResult) {
 		return
 	}
 
-	log.Debugf("Sending result for requestID=%v, tx=%v", id,
-		result.Tx.TxHash())
+	log.Debugf("Sending result %v for requestID=%v", result, id)
 
 	select {
 	// Send the result to the subscriber.
@@ -673,20 +687,29 @@ func (t *TxPublisher) notifyResult(result *BumpResult) {
 func (t *TxPublisher) removeResult(result *BumpResult) {
 	id := result.requestID
 
-	// Remove the record from the maps if there's an error. This means this
-	// tx has failed its broadcast and cannot be retried. There are two
-	// cases,
+	var txid chainhash.Hash
+	if result.Tx != nil {
+		txid = result.Tx.TxHash()
+	}
+
+	// Remove the record from the maps if there's an error or the tx is
+	// confirmed. When there's an error, it means this tx has failed its
+	// broadcast and cannot be retried. There are two cases,
 	// - when the budget cannot cover the fee.
-	// - when a non-RBF related error occurs.
+	// - when a non-fee related error returned from PublishTransaction.
 	switch result.Event {
 	case TxFailed:
 		log.Errorf("Removing monitor record=%v, tx=%v, due to err: %v",
-			id, result.Tx.TxHash(), result.Err)
+			id, txid, result.Err)
 
 	case TxConfirmed:
-		// Remove the record is the tx is confirmed.
+		// Remove the record if the tx is confirmed.
 		log.Debugf("Removing confirmed monitor record=%v, tx=%v", id,
-			result.Tx.TxHash())
+			txid)
+
+	case TxError:
+		// Remove the record if there's an error.
+		log.Debugf("Removing monitor record=%v due to error", id)
 
 	// Do nothing if it's neither failed or confirmed.
 	default:
