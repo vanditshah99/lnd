@@ -238,8 +238,9 @@ func (p *SweeperInput) isMature(currentHeight uint32) (bool, uint32) {
 	// this input and wait for the expiry.
 	locktime = p.BlocksToMaturity() + p.HeightHint()
 	if currentHeight+1 < locktime {
-		log.Debugf("Input %v has CSV expiry=%v, current height is %v",
-			p.OutPoint(), locktime, currentHeight)
+		log.Debugf("Input %v has CSV expiry=%v, current height is %v, "+
+			"skipped sweeping", p.OutPoint(), locktime,
+			currentHeight)
 
 		return false, locktime
 	}
@@ -1200,8 +1201,8 @@ func (s *UtxoSweeper) calculateDefaultDeadline(pi *SweeperInput) int32 {
 	if !matured {
 		defaultDeadline = int32(locktime + s.cfg.NoDeadlineConfTarget)
 		log.Debugf("Input %v is immature, using locktime=%v instead "+
-			"of current height=%d", pi.OutPoint(), locktime,
-			s.currentHeight)
+			"of current height=%d as starting height",
+			pi.OutPoint(), locktime, s.currentHeight)
 	}
 
 	return defaultDeadline
@@ -1213,7 +1214,8 @@ func (s *UtxoSweeper) handleNewInput(input *sweepInputMessage) error {
 	outpoint := input.input.OutPoint()
 	pi, pending := s.inputs[outpoint]
 	if pending {
-		log.Debugf("Already has pending input %v received", outpoint)
+		log.Infof("Already has pending input %v received, old params: "+
+			"%v, new params %v", outpoint, pi.params, input.params)
 
 		s.handleExistingInput(input, pi)
 
@@ -1495,6 +1497,8 @@ func (s *UtxoSweeper) updateSweeperInputs() InputsMap {
 	// turn this inputs map into a SyncMap in case we wanna add concurrent
 	// access to the map in the future.
 	for op, input := range s.inputs {
+		log.Tracef("Checking input: %s, state=%v", input, input.state)
+
 		// If the input has reached a final state, that it's either
 		// been swept, or failed, or excluded, we will remove it from
 		// our sweeper.
@@ -1524,7 +1528,7 @@ func (s *UtxoSweeper) updateSweeperInputs() InputsMap {
 		// skip this input and wait for the locktime to be reached.
 		mature, locktime := input.isMature(uint32(s.currentHeight))
 		if !mature {
-			log.Infof("Skipping input %v due to locktime=%v not "+
+			log.Debugf("Skipping input %v due to locktime=%v not "+
 				"reached, current height is %v", op, locktime,
 				s.currentHeight)
 
