@@ -1,6 +1,11 @@
 package chainio
 
-import "github.com/stretchr/testify/mock"
+import (
+	"github.com/btcsuite/btcd/txscript"
+	"github.com/btcsuite/btcd/wire"
+	"github.com/lightningnetwork/lnd/chainntnfs"
+	"github.com/stretchr/testify/mock"
+)
 
 type MockConsumer struct {
 	mock.Mock
@@ -57,4 +62,32 @@ func (m *MockBlockbeat) DispatchSequential(consumers []Consumer) error {
 	args := m.Called(consumers)
 
 	return args.Error(0)
+}
+
+// HasOutpointSpentByScript queries the block to find a spending tx that spends
+// the given outpoint using the pkScript.
+func (m *MockBlockbeat) HasOutpointSpentByScript(outpoint wire.OutPoint,
+	pkScript txscript.PkScript) (*chainntnfs.SpendDetail, error) {
+
+	args := m.Called(outpoint, pkScript)
+
+	if args.Get(0) == nil {
+		return nil, args.Error(1)
+	}
+
+	return args.Get(0).(*chainntnfs.SpendDetail), args.Error(1)
+}
+
+// HasOutpointSpent queries the block to find a spending tx that spends the
+// given outpoint. Returns the spend details if found, otherwise nil.
+func (m *MockBlockbeat) HasOutpointSpent(
+	outpoint wire.OutPoint) *chainntnfs.SpendDetail {
+
+	args := m.Called(outpoint)
+
+	if args.Get(0) == nil {
+		return nil
+	}
+
+	return args.Get(0).(*chainntnfs.SpendDetail)
 }
