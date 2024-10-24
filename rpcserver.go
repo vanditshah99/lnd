@@ -6508,7 +6508,9 @@ func (r *rpcServer) DescribeGraph(ctx context.Context,
 	// First iterate through all the known nodes (connected or unconnected
 	// within the graph), collating their current state into the RPC
 	// response.
-	err := graph.ForEachNode(func(_ kvdb.RTx, node *models.LightningNode) error {
+	err := graph.ForEachNode(func(_ kvdb.RTx,
+		node *models.LightningNode) error {
+
 		lnNode := marshalNode(node)
 
 		resp.Nodes = append(resp.Nodes, lnNode)
@@ -6538,7 +6540,7 @@ func (r *rpcServer) DescribeGraph(ctx context.Context,
 
 		return nil
 	})
-	if err != nil && err != graphdb.ErrGraphNoEdgesFound {
+	if err != nil && !errors.Is(err, graphdb.ErrGraphNoEdgesFound) {
 		return nil, err
 	}
 
@@ -6784,7 +6786,7 @@ func (r *rpcServer) GetNodeInfo(ctx context.Context,
 	// be returned.
 	node, err := graph.FetchLightningNode(pubKey)
 	switch {
-	case err == graphdb.ErrGraphNodeNotFound:
+	case errors.Is(err, graphdb.ErrGraphNodeNotFound):
 		return nil, status.Error(codes.NotFound, err.Error())
 	case err != nil:
 		return nil, err
