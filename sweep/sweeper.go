@@ -435,7 +435,7 @@ func New(cfg *UtxoSweeperConfig) *UtxoSweeper {
 }
 
 // Start starts the process of constructing and publish sweep txes.
-func (s *UtxoSweeper) Start() error {
+func (s *UtxoSweeper) Start(beat chainio.Blockbeat) error {
 	if !atomic.CompareAndSwapUint32(&s.started, 0, 1) {
 		return nil
 	}
@@ -445,6 +445,9 @@ func (s *UtxoSweeper) Start() error {
 	// Retrieve relay fee for dust limit calculation. Assume that this will
 	// not change from here on.
 	s.relayFeeRate = s.cfg.FeeEstimator.RelayFeePerKW()
+
+	// Set the current height.
+	s.currentHeight = beat.Height()
 
 	// Start sweeper main loop.
 	s.wg.Add(1)
