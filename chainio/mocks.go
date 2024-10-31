@@ -1,6 +1,7 @@
 package chainio
 
 import (
+	"github.com/btcsuite/btclog/v2"
 	"github.com/stretchr/testify/mock"
 )
 
@@ -24,4 +25,48 @@ func (m *MockConsumer) ProcessBlock(b Blockbeat) error {
 	args := m.Called(b)
 
 	return args.Error(0)
+}
+
+// MockBlockbeat is a mock implementation of the Blockbeat interface.
+type MockBlockbeat struct {
+	mock.Mock
+}
+
+// Compile-time constraint to ensure MockBlockbeat implements Blockbeat.
+var _ Blockbeat = (*MockBlockbeat)(nil)
+
+// NotifyBlockProcessed signals that the block has been processed. It takes an
+// error resulted from processing the block, and a quit chan of the subsystem.
+func (m *MockBlockbeat) NotifyBlockProcessed(err error,
+	quitChan chan struct{}) {
+
+	m.Called(err, quitChan)
+}
+
+// Height returns the current block height.
+func (m *MockBlockbeat) Height() int32 {
+	args := m.Called()
+
+	return args.Get(0).(int32)
+}
+
+// logger returns the logger for the blockbeat.
+func (m *MockBlockbeat) logger() btclog.Logger {
+	args := m.Called()
+
+	return args.Get(0).(btclog.Logger)
+}
+
+// errChan returns the error channel for the blockbeat.
+func (m *MockBlockbeat) errChan() <-chan error {
+	args := m.Called()
+
+	return args.Get(0).(chan error)
+}
+
+// copy returns a deep copy of the blockbeat.
+func (m *MockBlockbeat) copy() Blockbeat {
+	args := m.Called()
+
+	return args.Get(0).(Blockbeat)
 }
