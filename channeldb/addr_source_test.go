@@ -41,8 +41,9 @@ func TestMultiAddrSource(t *testing.T) {
 
 		// Query it for the addresses known for node 1. The results
 		// should contain addr 1, 2 and 3.
-		addrs, err := multiSrc.AddrsForNode(pk1)
+		known, addrs, err := multiSrc.AddrsForNode(pk1)
 		require.NoError(t, err)
+		require.True(t, known)
 		require.ElementsMatch(t, addrs, []net.Addr{addr1, addr2, addr3})
 	})
 
@@ -63,9 +64,31 @@ func TestMultiAddrSource(t *testing.T) {
 
 		// Query it for the addresses known for node 1. The results
 		// should contain addr 1.
-		addrs, err := multiSrc.AddrsForNode(pk1)
+		known, addrs, err := multiSrc.AddrsForNode(pk1)
 		require.NoError(t, err)
+		require.True(t, known)
 		require.ElementsMatch(t, addrs, []net.Addr{addr1})
+	})
+
+	t.Run("unknown address", func(t *testing.T) {
+		t.Parallel()
+
+		var (
+			src1 = newMockAddrSource()
+			src2 = newMockAddrSource()
+		)
+
+		// Create a multi-addr source that consists of both source 1
+		// and 2. Neither source known of node 1.
+		multiSrc := NewMultiAddrSource(src1, src2)
+
+		// Query it for the addresses known for node 1. It should return
+		// false to indicate that the node is unknown to all backing
+		// sources.
+		known, addrs, err := multiSrc.AddrsForNode(pk1)
+		require.NoError(t, err)
+		require.False(t, known)
+		require.Empty(t, addrs)
 	})
 }
 
@@ -81,10 +104,12 @@ func newMockAddrSource() *mockAddrSource {
 	}
 }
 
-func (m *mockAddrSource) AddrsForNode(pub *btcec.PublicKey) ([]net.Addr,
+func (m *mockAddrSource) AddrsForNode(pub *btcec.PublicKey) (bool, []net.Addr,
 	error) {
 
-	return m.addrs[pub], nil
+	addrs, ok := m.addrs[pub]
+
+	return ok, addrs, nil
 }
 
 func (m *mockAddrSource) setAddrs(pub *btcec.PublicKey, addrs ...net.Addr) {
