@@ -75,7 +75,16 @@ const (
 	// TxPublished is sent when the broadcast attempt is finished.
 	TxPublished BumpEvent = iota
 
-	// TxFailed is sent when the broadcast attempt fails.
+	// TxFailed is sent when the tx has encountered a fee-related error
+	// during its creation or broadcast, or an internal error from the fee
+	// bumper. In either case the inputs in this tx should be retried with
+	// either a different grouping strategy or an increased budget.
+	//
+	// NOTE: We also send this event when there's a third party spend
+	// event, and the sweeper will handle cleaning this up.
+	//
+	// TODO(yy): Remove the above usage once we stop sweeping non-CPFP
+	// anchors.
 	TxFailed
 
 	// TxReplaced is sent when the original tx is replaced by a new one.
@@ -270,8 +279,11 @@ func (b *BumpResult) String() string {
 // Validate validates the BumpResult so it's safe to use.
 func (b *BumpResult) Validate() error {
 	// Every result must have a tx except the error or fail case.
-	if b.Tx == nil && b.Event != TxFatal {
-		return fmt.Errorf("%w: nil tx", ErrInvalidBumpResult)
+	if b.Tx == nil {
+		isFail := b.Event == TxFailed || b.Event == TxFatal
+		if !isFail {
+			return fmt.Errorf("%w: nil tx", ErrInvalidBumpResult)
+		}
 	}
 
 	// Every result must have a known event.
