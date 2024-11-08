@@ -7417,6 +7417,7 @@ func newIncomingHtlcResolution(signer input.Signer,
 					KeyRing:        keyRing,
 					HtlcID:         fn.Some(htlc.HtlcIndex),
 					CsvDelay:       htlcCsvDelay,
+					CltvDelay:      fn.Some(htlc.RefundTimeout),
 					CommitFee:      chanState.RemoteCommitment.CommitFee, //nolint:lll
 					PayHash:        fn.Some(htlc.RHash),
 					CommitCsvDelay: csvDelay,
@@ -7629,6 +7630,7 @@ func newIncomingHtlcResolution(signer input.Signer,
 				}),
 				CommitCsvDelay: csvDelay,
 				HtlcAmt:        btcutil.Amount(txOut.Value),
+				CltvDelay:      fn.Some(htlc.RefundTimeout),
 			})
 		},
 	)
