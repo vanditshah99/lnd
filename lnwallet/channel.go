@@ -7608,17 +7608,17 @@ func newIncomingHtlcResolution(signer input.Signer,
 				ChanType:      chanType,
 				ShortChanID:   chanState.ShortChanID(),
 				Initiator:     chanState.IsInitiator,
-				CommitBlob:    chanState.RemoteCommitment.CustomBlob, //nolint:lll
+				CommitBlob:    chanState.LocalCommitment.CustomBlob,  //nolint:lll
 				Type:          input.TaprootHtlcAcceptedLocalSuccess, //nolint:lll
 				FundingBlob:   chanState.CustomBlob,
-				CloseType:     RemoteForceClose,
+				CloseType:     LocalForceClose,
 				CommitTx:      commitTx,
 				ContractPoint: op,
 				SignDesc:      sweepSignDesc,
 				KeyRing:       keyRing,
 				HtlcID:        fn.Some(htlc.HtlcIndex),
 				CsvDelay:      htlcCsvDelay,
-				CommitFee:     chanState.RemoteCommitment.CommitFee, //nolint:lll
+				CommitFee:     chanState.LocalCommitment.CommitFee, //nolint:lll
 				PayHash:       fn.Some(htlc.RHash),
 				AuxSigDesc: fn.Some(AuxSigDesc{
 					SignDetails: *txSignDetails,
