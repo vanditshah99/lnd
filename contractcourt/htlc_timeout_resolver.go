@@ -580,6 +580,7 @@ func (h *htlcTimeoutResolver) sweepDirectHtlcOutput(immediate bool) error {
 		&h.htlcResolution.ClaimOutpoint, htlcWitnessType,
 		&h.htlcResolution.SweepSignDesc, h.broadcastHeight,
 		h.htlcResolution.CsvDelay, h.htlcResolution.Expiry,
+		input.WithResolutionBlob(h.htlcResolution.ResolutionBlob),
 	)
 
 	// Calculate the budget.
