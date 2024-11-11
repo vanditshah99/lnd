@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd
+module github.com/vanditshah99/lnd
 
 require (
 	github.com/NebulousLabs/go-upnp v0.0.0-20180202185039-29b680b06c82
