@@ -1,6 +1,7 @@
 package contractcourt
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"sync"
@@ -22,6 +23,7 @@ import (
 	"github.com/lightningnetwork/lnd/lnwallet"
 	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
 	"github.com/lightningnetwork/lnd/lnwire"
+	"golang.org/x/sync/errgroup"
 )
 
 // ErrChainArbExiting signals that the chain arbitrator is shutting down.
@@ -258,6 +260,10 @@ type ChainArbitrator struct {
 	// methods and interface it needs to operate.
 	cfg ChainArbitratorConfig
 
+	// resolveContract is a channel which is used to signal the cleanup of
+	// the channel arbitrator resources.
+	resolveChanArb chan wire.OutPoint
+
 	// chanSource will be used by the ChainArbitrator to fetch all the
 	// active channels that it must still watch over.
 	chanSource *channeldb.DB
@@ -276,6 +282,7 @@ func NewChainArbitrator(cfg ChainArbitratorConfig,
 		cfg:            cfg,
 		activeChannels: make(map[wire.OutPoint]*ChannelArbitrator),
 		activeWatchers: make(map[wire.OutPoint]*chainWatcher),
+		resolveChanArb: make(chan wire.OutPoint),
 		chanSource:     db,
 		quit:           make(chan struct{}),
 	}
@@ -497,6 +504,9 @@ func (c *ChainArbitrator) getArbChannel(
 // ResolveContract marks a contract as fully resolved within the database.
 // This is only to be done once all contracts which were live on the channel
 // before hitting the chain have been resolved.
+//
+// NOTE: This function must be called without the chain arbitrator lock because
+// it acquires the lock itself.
 func (c *ChainArbitrator) ResolveContract(chanPoint wire.OutPoint) error {
 	log.Infof("Marking ChannelPoint(%v) fully resolved", chanPoint)
 
@@ -509,43 +519,23 @@ func (c *ChainArbitrator) ResolveContract(chanPoint wire.OutPoint) error {
 		return err
 	}
 
-	// Now that the channel has been marked as fully closed, we'll stop
-	// both the channel arbitrator and chain watcher for this channel if
-	// they're still active.
-	var arbLog ArbitratorLog
-	c.Lock()
-	chainArb := c.activeChannels[chanPoint]
-	delete(c.activeChannels, chanPoint)
-
-	chainWatcher := c.activeWatchers[chanPoint]
-	delete(c.activeWatchers, chanPoint)
-	c.Unlock()
-
-	if chainArb != nil {
-		arbLog = chainArb.log
-
-		if err := chainArb.Stop(); err != nil {
-			log.Warnf("unable to stop ChannelArbitrator(%v): %v",
-				chanPoint, err)
-		}
-	}
-	if chainWatcher != nil {
-		if err := chainWatcher.Stop(); err != nil {
-			log.Warnf("unable to stop ChainWatcher(%v): %v",
-				chanPoint, err)
-		}
-	}
-
 	// Once this has been marked as resolved, we'll wipe the log that the
 	// channel arbitrator was using to store its persistent state. We do
 	// this after marking the channel resolved, as otherwise, the
 	// arbitrator would be re-created, and think it was starting from the
 	// default state.
-	if arbLog != nil {
+	c.Lock()
+	chainArb := c.activeChannels[chanPoint]
+	c.Unlock()
+	if chainArb != nil {
+		arbLog := chainArb.log
 		if err := arbLog.WipeHistory(); err != nil {
 			return err
 		}
 	}
+
+	// Make sure all the resources of the channel arbitrator are cleaned up.
+	fn.SendOrQuit(c.resolveChanArb, chanPoint, c.quit)
 
 	return nil
 }
@@ -765,21 +755,84 @@ func (c *ChainArbitrator) Start() error {
 		return err
 	}
 
+	// Launch the cleanup collector to clean up the channel arbitrator
+	// resources as soon as a channel is fully resolved onchain.
+	c.wg.Add(1)
+	go func() {
+		defer c.wg.Done()
+		c.cleanupCollector()
+	}()
+
 	// Launch all the goroutines for each arbitrator so they can carry out
 	// their duties.
+	// Set a timeout for the group of goroutines. Maybe have different
+	// timeouts for itests and normal operations.
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+
+	// Create an errgroup with the context
+	errGroup, ctx := errgroup.WithContext(ctx)
+
 	for _, arbitrator := range c.activeChannels {
 		startState, ok := startStates[arbitrator.cfg.ChanPoint]
 		if !ok {
 			stopAndLog()
+			// In case we encounter an error we need to cancel the
+			// context to ensure all goroutines are cleaned up.
+			cancel()
 			return fmt.Errorf("arbitrator: %v has no start state",
 				arbitrator.cfg.ChanPoint)
 		}
 
-		if err := arbitrator.Start(startState); err != nil {
-			stopAndLog()
-			return err
-		}
+		errGroup.Go(func() error {
+			// Create buffered error channel for this specific
+			// arbitrator
+			errChan := make(chan error, 1)
+
+			// Start arbitrator in a separate goroutine
+			go func() {
+				errChan <- arbitrator.Start(startState)
+			}()
+
+			// Wait for either the arbitrator to complete or the
+			// context to be cancelled/timing out.
+			select {
+			case err := <-errChan:
+
+				return err
+
+			case <-ctx.Done():
+
+				return ctx.Err()
+			}
+		})
 	}
+
+	// Wait for all arbitrators to start in a separate goroutine. We don't
+	// have to wait here for the chain arbitrator to start, because there
+	// might be situations where other subsystems will block the start up
+	// while fetching resolve information (e.g. custom channels.)
+	//
+	// NOTE: We do not add this collector to the waitGroup because we want
+	// to stop the chain arbitrator if there occurs an error.
+	go func() {
+		defer cancel()
+		select {
+		// As soon as the context cancels we can be sure the
+		// errGroup has finished waiting.
+		case <-ctx.Done():
+			if err := errGroup.Wait(); err != nil {
+				log.Criticalf("error starting arbitrators: %v",
+					err)
+
+				stopAndLog()
+			}
+
+		case <-c.quit:
+			// Chain arbitrator is shutting down so we close the
+			// goroutine.
+			return
+		}
+	}()
 
 	// Subscribe to a single stream of block epoch notifications that we
 	// will dispatch to all active arbitrators.
@@ -798,6 +851,50 @@ func (c *ChainArbitrator) Start() error {
 	// TODO(roasbeef): eventually move all breach watching here
 
 	return nil
+}
+
+// cleanupCollector cleans up the channel arbitrator resources as soon as a
+// channel is fully resolved onchain.
+//
+// NOTE: This function must be run as a goroutine.
+func (c *ChainArbitrator) cleanupCollector() {
+	for {
+		select {
+		case chanPoint := <-c.resolveChanArb:
+			log.Debugf("ChannelArbitrator(%v) fully resolved, "+
+				"removing from active sets", chanPoint)
+
+			// Now that the channel has been marked as fully closed,
+			// we'll stop both the channel arbitrator and chain
+			// watcher for this channel if they're still active.
+			c.Lock()
+			channelArb := c.activeChannels[chanPoint]
+			delete(c.activeChannels, chanPoint)
+
+			chainWatcher := c.activeWatchers[chanPoint]
+			delete(c.activeWatchers, chanPoint)
+			c.Unlock()
+
+			if channelArb != nil {
+				if err := channelArb.Stop(); err != nil {
+					log.Warnf("unable to stop "+
+						"ChannelArbitrator(%v): %v",
+						chanPoint, err)
+				}
+			}
+			if chainWatcher != nil {
+				if err := chainWatcher.Stop(); err != nil {
+					log.Warnf("unable to stop "+
+						"ChainWatcher(%v): %v",
+						chanPoint, err)
+				}
+			}
+
+		// Exit if the chain arbitrator is shutting down.
+		case <-c.quit:
+			return
+		}
+	}
 }
 
 // blockRecipient contains the information we need to dispatch a block to a
@@ -1192,9 +1289,6 @@ func (c *ChainArbitrator) ForceCloseContract(chanPoint wire.OutPoint) (*wire.Msg
 // channel has finished its final funding flow, it should be registered with
 // the ChainArbitrator so we can properly react to any on-chain events.
 func (c *ChainArbitrator) WatchNewChannel(newChan *channeldb.OpenChannel) error {
-	c.Lock()
-	defer c.Unlock()
-
 	chanPoint := newChan.FundingOutpoint
 
 	log.Infof("Creating new ChannelArbitrator for ChannelPoint(%v)",
@@ -1230,8 +1324,6 @@ func (c *ChainArbitrator) WatchNewChannel(newChan *channeldb.OpenChannel) error 
 		return err
 	}
 
-	c.activeWatchers[chanPoint] = chainWatcher
-
 	// We'll also create a new channel arbitrator instance using this new
 	// channel, and our internal state.
 	channelArb, err := newActiveChannelArbitrator(
@@ -1241,9 +1333,11 @@ func (c *ChainArbitrator) WatchNewChannel(newChan *channeldb.OpenChannel) error 
 		return err
 	}
 
-	// With the arbitrator created, we'll add it to our set of active
-	// arbitrators, then launch it.
+	// Make sure we hold the lock for the shortest period of time.
+	c.Lock()
+	c.activeWatchers[chanPoint] = chainWatcher
 	c.activeChannels[chanPoint] = channelArb
+	c.Unlock()
 
 	if err := channelArb.Start(nil); err != nil {
 		return err
