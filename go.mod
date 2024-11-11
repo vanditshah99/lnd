@@ -33,17 +33,17 @@ require (
 	github.com/kkdai/bstream v1.0.0
 	github.com/lightninglabs/neutrino v0.16.1-0.20240425105051-602843d34ffd
 	github.com/lightninglabs/neutrino/cache v1.1.2
-	github.com/lightningnetwork/lightning-onion v1.2.1-0.20240712235311-98bd56499dfb
-	github.com/lightningnetwork/lnd/cert v1.2.2
-	github.com/lightningnetwork/lnd/clock v1.1.1
-	github.com/lightningnetwork/lnd/fn v1.2.3
-	github.com/lightningnetwork/lnd/healthcheck v1.2.6
-	github.com/lightningnetwork/lnd/kvdb v1.4.11
-	github.com/lightningnetwork/lnd/queue v1.1.1
-	github.com/lightningnetwork/lnd/sqldb v1.0.5
-	github.com/lightningnetwork/lnd/ticker v1.1.1
-	github.com/lightningnetwork/lnd/tlv v1.2.6
-	github.com/lightningnetwork/lnd/tor v1.1.4
+	github.com/vanditshah99/lightning-onion v1.2.1-0.20240712235311-98bd56499dfb
+	github.com/vanditshah99/lnd/cert v1.2.2
+	github.com/vanditshah99/lnd/clock v1.1.1
+	github.com/vanditshah99/lnd/fn v1.2.3
+	github.com/vanditshah99/lnd/healthcheck v1.2.6
+	github.com/vanditshah99/lnd/kvdb v1.4.11
+	github.com/vanditshah99/lnd/queue v1.1.1
+	github.com/vanditshah99/lnd/sqldb v1.0.5
+	github.com/vanditshah99/lnd/ticker v1.1.1
+	github.com/vanditshah99/lnd/tlv v1.2.6
+	github.com/vanditshah99/lnd/tor v1.1.4
 	github.com/ltcsuite/ltcd v0.0.0-20190101042124-f37f8bf35796
 	github.com/miekg/dns v1.1.43
 	github.com/pkg/errors v0.9.1

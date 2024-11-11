@@ -4,7 +4,7 @@ package routerrpc;
 
 import "lightning.proto";
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/routerrpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/routerrpc";
 
 /*
  * Comments in this file will be directly parsed into the API

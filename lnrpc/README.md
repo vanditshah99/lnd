@@ -1,8 +1,8 @@
 lnrpc
 =====
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lightningnetwork/lnd/blob/master/LICENSE)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/lightningnetwork/lnd/lnrpc)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vanditshah99/lnd/blob/master/LICENSE)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/vanditshah99/lnd/lnrpc)
 
 This lnrpc package implements both a client and server for `lnd`s RPC system
 which is based off of the high-performance cross-platform
@@ -147,7 +147,7 @@ description):
 ## Installation and Updating
 
 ```shell
-$  go get -u github.com/lightningnetwork/lnd/lnrpc
+$  go get -u github.com/vanditshah99/lnd/lnrpc
 ```
 
 ## Generate protobuf definitions

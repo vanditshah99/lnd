@@ -19,71 +19,71 @@
 
 # Bug Fixes
 
-* [Fixed a bug](https://github.com/lightningnetwork/lnd/pull/8857) to correctly 
+* [Fixed a bug](https://github.com/vanditshah99/lnd/pull/8857) to correctly 
   propagate mission control and debug level config values to the main LND config
   struct so that the GetDebugInfo response is accurate.
 
-* [Fix a bug](https://github.com/lightningnetwork/lnd/pull/9134) that would 
+* [Fix a bug](https://github.com/vanditshah99/lnd/pull/9134) that would 
   cause a nil pointer dereference during the probing of a payment request that 
   does not contain a payment address.
   
-* [Fixed a bug](https://github.com/lightningnetwork/lnd/pull/9033) where we
+* [Fixed a bug](https://github.com/vanditshah99/lnd/pull/9033) where we
   would not signal an error when trying to bump an non-anchor channel but
   instead report a successful cpfp registration although no fee bumping is
   possible for non-anchor channels anyways.
 
 * [Use the required route blinding 
-  feature-bit](https://github.com/lightningnetwork/lnd/pull/9143) for invoices 
+  feature-bit](https://github.com/vanditshah99/lnd/pull/9143) for invoices 
   containing blinded paths.
 
-* [Fix a bug](https://github.com/lightningnetwork/lnd/pull/9137) that prevented
+* [Fix a bug](https://github.com/vanditshah99/lnd/pull/9137) that prevented
   a graceful shutdown of LND during the main chain backend sync check in certain
   cases.
   
-* [Fixed a bug](https://github.com/lightningnetwork/lnd/pull/9068) where dust
+* [Fixed a bug](https://github.com/vanditshah99/lnd/pull/9068) where dust
   htlcs although not being able to be resolved onchain were not canceled
   back before the commitment tx was confirmed causing potentially force closes
   of the incoming channel.
 
-* [Fixed a bug](https://github.com/lightningnetwork/lnd/pull/9249) found in the
+* [Fixed a bug](https://github.com/vanditshah99/lnd/pull/9249) found in the
   mission control store that can block the shutdown process of LND.
 
 # New Features
 ## Functional Enhancements
 ## RPC Additions
 
-* [Add a new rpc endpoint](https://github.com/lightningnetwork/lnd/pull/8843)
+* [Add a new rpc endpoint](https://github.com/vanditshah99/lnd/pull/8843)
   `BumpForceCloseFee` which moves the functionality soley available in the
   `lncli` to LND hence making it more universal.
 
 * [The `walletrpc.FundPsbt` RPC method now has an option to specify the fee as
   `sat_per_kw` which allows for more precise
-  fees](https://github.com/lightningnetwork/lnd/pull/9013).
+  fees](https://github.com/vanditshah99/lnd/pull/9013).
 
 * [The `walletrpc.FundPsbt` method now has a new option to specify the maximum
-  fee to output amounts ratio.](https://github.com/lightningnetwork/lnd/pull/8600)
+  fee to output amounts ratio.](https://github.com/vanditshah99/lnd/pull/8600)
 
 ## lncli Additions
 
 * [A pre-generated macaroon root key can now be specified in `lncli create` and
-  `lncli createwatchonly`](https://github.com/lightningnetwork/lnd/pull/9172) to
+  `lncli createwatchonly`](https://github.com/vanditshah99/lnd/pull/9172) to
   allow for deterministic macaroon generation.
 
 * [The `lncli wallet fundpsbt` sub command now has a `--sat_per_kw` flag to
   specify more precise fee
-  rates](https://github.com/lightningnetwork/lnd/pull/9013).
+  rates](https://github.com/vanditshah99/lnd/pull/9013).
 
 * The `lncli wallet fundpsbt` command now has a [`--max_fee_ratio` argument to
-  specify the max fees to output amounts ratio.](https://github.com/lightningnetwork/lnd/pull/8600)
+  specify the max fees to output amounts ratio.](https://github.com/vanditshah99/lnd/pull/8600)
 
 # Improvements
 ## Functional Updates
 
-* [Allow](https://github.com/lightningnetwork/lnd/pull/9017) the compression of 
+* [Allow](https://github.com/vanditshah99/lnd/pull/9017) the compression of 
   logs during rotation with ZSTD via the `logging.file.compressor` startup 
   argument.
 
-* The SCB file now [contains more data][https://github.com/lightningnetwork/lnd/pull/8183]
+* The SCB file now [contains more data][https://github.com/vanditshah99/lnd/pull/8183]
   that enable a last resort rescue for certain cases where the peer is no longer
   around.
 
@@ -93,7 +93,7 @@
 
 * Some RPCs that previously just returned an empty response message now at least
   return [a short status
-  message](https://github.com/lightningnetwork/lnd/pull/7762) to help command
+  message](https://github.com/vanditshah99/lnd/pull/7762) to help command
   line users to better understand that the command was executed successfully and
   something was executed or initiated to run in the background. The following
   CLI commands now don't just return an empty response (`{}`) anymore:
@@ -109,7 +109,7 @@
     * `lncli restorechanbackup` (`Lightning.RestoreChannelBackups` RPC)
     * `lncli verifychanbackup` (`Lightning.VerifyChanBackup` RPC)
 * The `ForwardInterceptor`'s `MODIFY` option will
-  [merge](https://github.com/lightningnetwork/lnd/pull/9240) any custom
+  [merge](https://github.com/vanditshah99/lnd/pull/9240) any custom
   range TLVs provided with the existing set of records on the HTLC,
   overwriting any conflicting values with those supplied by the API.
 
@@ -117,16 +117,16 @@
 
 ## Code Health
 
-* [Add retry logic](https://github.com/lightningnetwork/lnd/pull/8381) for
+* [Add retry logic](https://github.com/vanditshah99/lnd/pull/8381) for
   watchtower block fetching with a max number of attempts and exponential
   back-off.
 
-* [Moved](https://github.com/lightningnetwork/lnd/pull/9138) profile related
+* [Moved](https://github.com/vanditshah99/lnd/pull/9138) profile related
   config settings to its own dedicated group. The old ones still work but will
   be removed in a future release.
  
 * [Update to use structured 
-  logging](https://github.com/lightningnetwork/lnd/pull/9083). This also 
+  logging](https://github.com/vanditshah99/lnd/pull/9083). This also 
   introduces a new `--logging.console.disable` option to disable logs being 
   written to stdout and a new `--logging.file.disable` option to disable writing 
   logs to the standard log file. It also adds `--logging.console.no-timestamps`
@@ -138,7 +138,7 @@
   Finally, the new `--logging.console.style` option can be used under the `dev` 
   build tag to add styling to console logging.
  
-* [Add max files and max file size](https://github.com/lightningnetwork/lnd/pull/9233) 
+* [Add max files and max file size](https://github.com/vanditshah99/lnd/pull/9233) 
   options to the `logging` config namespace under new `--logging.file.max-files` 
   and `--logging.files.max-file-size` options. The old options (`--maxlogfiles` 
   and `--maxlogfilesize`) will still work but deprecation notices have been 
@@ -147,7 +147,7 @@
   max 10 MB to 20 MB. 
  
 * [Deprecate `dust-threshold`
-config option](https://github.com/lightningnetwork/lnd/pull/9182) and introduce
+config option](https://github.com/vanditshah99/lnd/pull/9182) and introduce
 a new option `channel-max-fee-exposure` which is unambiguous in its description.
 The underlying functionality between those two options remain the same.
 
@@ -156,33 +156,33 @@ The underlying functionality between those two options remain the same.
 
 * Log rotation can now use ZSTD 
 
-* [A new method](https://github.com/lightningnetwork/lnd/pull/9195)
+* [A new method](https://github.com/vanditshah99/lnd/pull/9195)
   `AssertTxnsNotInMempool` has been added to `lntest` package to allow batch
   exclusion check in itest.
 
 # Technical and Architectural Updates
 ## BOLT Spec Updates
 
-* Add new [lnwire](https://github.com/lightningnetwork/lnd/pull/8044) messages
+* Add new [lnwire](https://github.com/vanditshah99/lnd/pull/8044) messages
   for the Gossip 1.75 protocol.
 
 ## Testing
 ## Database
 
 * [Migrate the mission control 
-  store](https://github.com/lightningnetwork/lnd/pull/8911) to use a more 
+  store](https://github.com/vanditshah99/lnd/pull/8911) to use a more 
   minimal encoding for payment attempt routes as well as use [pure TLV 
-  encoding](https://github.com/lightningnetwork/lnd/pull/9167).
+  encoding](https://github.com/vanditshah99/lnd/pull/9167).
 
 * [Migrate the mission control 
-  store](https://github.com/lightningnetwork/lnd/pull/9001) so that results are 
+  store](https://github.com/vanditshah99/lnd/pull/9001) so that results are 
   namespaced. All existing results are written to the "default" namespace.
 
 ## Code Health
 
 ## Tooling and Documentation
 
-* [Improved `lncli create` command help text](https://github.com/lightningnetwork/lnd/pull/9077)
+* [Improved `lncli create` command help text](https://github.com/vanditshah99/lnd/pull/9077)
   by replacing the word `argument` with `input` in the command description,
   clarifying that the command requires interactive inputs rather than arguments.
 

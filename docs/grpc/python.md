@@ -28,7 +28,7 @@ file in Python before you can use it to communicate with lnd.
     lnd $  git clone https://github.com/googleapis/googleapis.git
     ```
 5. Copy the lnd lightning.proto file (you'll find this at
-  [lnrpc/lightning.proto](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/lightning.proto))
+  [lnrpc/lightning.proto](https://github.com/vanditshah99/lnd/blob/master/lnrpc/lightning.proto))
   or just download it
     ```shell
     lnd $  curl -o lightning.proto -s https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/lightning.proto

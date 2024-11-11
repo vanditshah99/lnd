@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package neutrinorpc;
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/neutrinorpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/neutrinorpc";
 
 /*
  * Comments in this file will be directly parsed into the API

@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/tools
+module github.com/vanditshah99/lnd/tools
 
 go 1.22.6
 

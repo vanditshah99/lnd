@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/kvdb
+module github.com/vanditshah99/lnd/kvdb
 
 require (
 	github.com/btcsuite/btclog/v2 v2.0.0-20241017175713-3428138b75c7
@@ -7,8 +7,8 @@ require (
 	github.com/fergusstrange/embedded-postgres v1.25.0
 	github.com/google/btree v1.0.1
 	github.com/jackc/pgx/v4 v4.18.1
-	github.com/lightningnetwork/lnd/healthcheck v1.2.4
-	github.com/lightningnetwork/lnd/sqldb v1.0.2
+	github.com/vanditshah99/lnd/healthcheck v1.2.4
+	github.com/vanditshah99/lnd/sqldb v1.0.2
 	github.com/stretchr/testify v1.9.0
 	go.etcd.io/bbolt v1.3.11
 	go.etcd.io/etcd/api/v3 v3.5.7
@@ -62,8 +62,8 @@ require (
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/lib/pq v1.10.9 // indirect
-	github.com/lightningnetwork/lnd/ticker v1.1.0 // indirect
-	github.com/lightningnetwork/lnd/tor v1.0.0 // indirect
+	github.com/vanditshah99/lnd/ticker v1.1.0 // indirect
+	github.com/vanditshah99/lnd/tor v1.0.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/miekg/dns v1.1.43 // indirect

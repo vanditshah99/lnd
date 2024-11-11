@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package watchtowerrpc;
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/watchtowerrpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/watchtowerrpc";
 
 /*
  * Comments in this file will be directly parsed into the API

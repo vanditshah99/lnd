@@ -4,7 +4,7 @@ package lnclipb;
 
 import "verrpc/verrpc.proto";
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/lnclipb";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/lnclipb";
 
 message VersionResponse {
     // The version information for lncli.

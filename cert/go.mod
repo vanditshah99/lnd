@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/cert
+module github.com/vanditshah99/lnd/cert
 
 go 1.19
 

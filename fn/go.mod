@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/fn
+module github.com/vanditshah99/lnd/fn
 
 go 1.19
 

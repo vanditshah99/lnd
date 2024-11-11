@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/sqldb
+module github.com/vanditshah99/lnd/sqldb
 
 require (
 	github.com/btcsuite/btclog/v2 v2.0.0-20241017175713-3428138b75c7

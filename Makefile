@@ -1,4 +1,4 @@
-PKG := github.com/lightningnetwork/lnd
+PKG := github.com/vanditshah99/lnd
 ESCPKG := github.com\/lightningnetwork\/lnd
 MOBILE_PKG := $(PKG)/mobile
 TOOLS_DIR := tools

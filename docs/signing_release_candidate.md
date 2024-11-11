@@ -27,7 +27,7 @@ When another developer is added to the trusted group of people which are
 allowed to sign the lnd/lncli releases, their public PGP key needs to be added to
 the LND repo. These keys are added in a PR in which 2 reviewers ensure the developer
 is in possession of the PGP key which will be added to the LND repo.
-(See https://github.com/lightningnetwork/lnd/pull/8788 as an example).
+(See https://github.com/vanditshah99/lnd/pull/8788 as an example).
 It is important that the name of the PGP key equals the name in the
 [verify-install.sh](/scripts/verify-install.sh) script. See also [scripts/keys/README.md](/scripts/keys/README.md) for more information.
 
@@ -38,7 +38,7 @@ through the aforementioned PR example, they are now able to provide their
 signature for the new release's "Manifest" file. To do so, the developer must
 follow these steps:
 
-* Follow the build instructions at https://github.com/lightningnetwork/lnd/blob/masterdocs/release.md#building-a-new-release.
+* Follow the build instructions at https://github.com/vanditshah99/lnd/blob/masterdocs/release.md#building-a-new-release.
 
 * After a successful build, all binaries and Manifest files, will be placed
 in a directory, named after the tag, created within the directory in which the build occurred. For 

@@ -1,14 +1,14 @@
 # Linear Fee Function
 
 This is a model of the default [Linear Fee
-Function](https://github.com/lightningnetwork/lnd/blob/b7c59b36a74975c4e710a02ea42959053735402e/sweep/fee_function.go#L66-L109)
+Function](https://github.com/vanditshah99/lnd/blob/b7c59b36a74975c4e710a02ea42959053735402e/sweep/fee_function.go#L66-L109)
 fee bumping mechanism in lnd.
 
 This model was inspired by a bug fix, due to an off-by-one error in the
-original code: https://github.com/lightningnetwork/lnd/issues/8741.
+original code: https://github.com/vanditshah99/lnd/issues/8741.
 
 The bug in the original code was fixed in this PR:
-https://github.com/lightningnetwork/lnd/pull/8751.
+https://github.com/vanditshah99/lnd/pull/8751.
 
 
 ## Model & Bug Fix Walk-through

@@ -46,7 +46,7 @@ development) builds.
 
 Downloading and installing an official release binary is recommended for use on
 mainnet.
-[Visit the release page on GitHub](https://github.com/lightningnetwork/lnd/releases)
+[Visit the release page on GitHub](https://github.com/vanditshah99/lnd/releases)
 and select the latest version that does not have the "Pre-release" label set
 (unless you explicitly want to help test a Release Candidate, RC).
 
@@ -69,7 +69,7 @@ To build a specific git tag of `lnd`, simply run the following steps (assuming
 `v0.x.y-beta` is the tagged version to build):
 
 ```shell
-git clone https://github.com/lightningnetwork/lnd
+git clone https://github.com/vanditshah99/lnd
 cd lnd
 git checkout v0.x.y-beta
 make docker-release tag=v0.x.y-beta
@@ -88,7 +88,7 @@ recommended for mainnet. The `master` branch can at times be unstable and
 running your node off of it can prevent it to go back to a previous, stable
 version if there are database migrations present.
 
-In order to work with [`lnd`](https://github.com/lightningnetwork/lnd), the 
+In order to work with [`lnd`](https://github.com/vanditshah99/lnd), the 
 following build dependencies are required:
 
 ### Installing Go
@@ -198,7 +198,7 @@ documentation for [building mobile libraries](../mobile) to learn more.
 With the preliminary steps completed, to install `lnd`, `lncli`, and all
 related dependencies run the following commands:
 ```shell
-git clone https://github.com/lightningnetwork/lnd
+git clone https://github.com/vanditshah99/lnd
 cd lnd
 make install
 ```
@@ -206,11 +206,11 @@ make install
 The command above will install the current _master_ branch of `lnd`. If you
 wish to install a tagged release of `lnd` (as the master branch can at times be
 unstable), then [visit the release page to locate the latest
-release](https://github.com/lightningnetwork/lnd/releases). Assuming the name
+release](https://github.com/vanditshah99/lnd/releases). Assuming the name
 of the release is `v0.x.x`, then you can compile this release from source with
 a small modification to the above command: 
 ```shell
-git clone https://github.com/lightningnetwork/lnd
+git clone https://github.com/vanditshah99/lnd
 cd lnd
 git checkout v0.x.x
 make install
@@ -271,7 +271,7 @@ make install tags="signrpc walletrpc routerrpc invoicesrpc"
 To update your version of `lnd` to the latest version run the following
 commands:
 ```shell
-cd $GOPATH/src/github.com/lightningnetwork/lnd
+cd $GOPATH/src/github.com/vanditshah99/lnd
 git pull
 make clean && make && make install
 ```
@@ -281,7 +281,7 @@ On FreeBSD, use gmake instead of make.
 Alternatively, if one doesn't wish to use `make`, then the `go` commands can be
 used directly:
 ```shell
-cd $GOPATH/src/github.com/lightningnetwork/lnd
+cd $GOPATH/src/github.com/vanditshah99/lnd
 git pull
 go install -v ./...
 ```
@@ -541,7 +541,7 @@ document](wallet.md).
 `lnd`'s authentication system is called **macaroons**, which are decentralized
 bearer credentials allowing for delegation, attenuation, and other cool
 features. You can learn more about them in Alex Akselrod's [writeup on
-GitHub](https://github.com/lightningnetwork/lnd/issues/20).
+GitHub](https://github.com/vanditshah99/lnd/issues/20).
 
 Running `lncli create` to create a wallet, will by default generate 
 the `admin.macaroon`, `read_only.macaroon`, and `macaroons.db` 
@@ -614,7 +614,7 @@ bitcoin.active=1
 
 Notice the `[Bitcoin]` section. This section houses the parameters for the
 Bitcoin chain. See a more detailed sample config file available
-[here](https://github.com/lightningnetwork/lnd/blob/master/sample-lnd.conf)
+[here](https://github.com/vanditshah99/lnd/blob/master/sample-lnd.conf)
 and explore the other sections for node configuration, including `[Btcd]`,
 `[Bitcoind]` and `[Neutrino]` depending on which chain and node type you're 
 using.

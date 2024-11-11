@@ -5,7 +5,7 @@ package walletrpc;
 import "lightning.proto";
 import "signrpc/signer.proto";
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/walletrpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/walletrpc";
 
 /*
  * Comments in this file will be directly parsed into the API

@@ -19,7 +19,7 @@
 
 # Bug Fixes
 
-* [Fixed a bug](https://github.com/lightningnetwork/lnd/pull/8887) in error
+* [Fixed a bug](https://github.com/vanditshah99/lnd/pull/8887) in error
   matching from publishing already confirmed transactions that can cause lnd
   fail to startup if `btcd` with an older version (pre-`v0.24.2`) is used.
 

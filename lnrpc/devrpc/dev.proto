@@ -4,7 +4,7 @@ package devrpc;
 
 import "lightning.proto";
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/devrpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/devrpc";
 
 /*
  * Comments in this file will be directly parsed into the API

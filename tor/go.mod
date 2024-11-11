@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/tor
+module github.com/vanditshah99/lnd/tor
 
 require (
 	github.com/btcsuite/btcd v0.23.3

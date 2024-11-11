@@ -1,4 +1,4 @@
-module github.com/lightningnetwork/lnd/clock
+module github.com/vanditshah99/lnd/clock
 
 go 1.19
 

@@ -4,7 +4,7 @@ package invoicesrpc;
 
 import "lightning.proto";
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/invoicesrpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/invoicesrpc";
 
 /*
  * Comments in this file will be directly parsed into the API

@@ -3,11 +3,11 @@ package graphsession
 import (
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing"
-	"github.com/lightningnetwork/lnd/routing/route"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/routing"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 // Factory implements the routing.GraphSessionFactory and can be used to start

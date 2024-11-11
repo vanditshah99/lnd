@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package wtclientrpc;
 
-option go_package = "github.com/lightningnetwork/lnd/lnrpc/wtclientrpc";
+option go_package = "github.com/vanditshah99/lnd/lnrpc/wtclientrpc";
 
 /*
  * Comments in this file will be directly parsed into the API

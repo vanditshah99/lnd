@@ -18,10 +18,10 @@ RUN apk add --no-cache --update alpine-sdk \
     make 
 
 # Copy in the local repository to build from.
-COPY . /go/src/github.com/lightningnetwork/lnd
+COPY . /go/src/github.com/vanditshah99/lnd
 
 #  Install/build lnd.
-RUN cd /go/src/github.com/lightningnetwork/lnd \
+RUN cd /go/src/github.com/vanditshah99/lnd \
 &&  make \
 &&  make install-all tags="signrpc walletrpc chainrpc invoicesrpc peersrpc"
 
