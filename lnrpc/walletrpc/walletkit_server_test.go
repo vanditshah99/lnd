@@ -17,12 +17,12 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lntest/mock"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwallet/chanfunding"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lntest/mock"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwallet/chanfunding"
 )
 
 // TestWitnessTypeMapping tests that the two witness type enums in the `input`

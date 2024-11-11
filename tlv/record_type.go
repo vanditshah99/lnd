@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/fn"
+	"github.com/vanditshah99/lnd/fn"
 	"golang.org/x/exp/constraints"
 )
 

@@ -9,12 +9,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lightningnetwork/lnd/lncfg"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/walletrpc"
-	"github.com/lightningnetwork/lnd/macaroons"
-	"github.com/lightningnetwork/lnd/walletunlocker"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lncfg"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnrpc/walletrpc"
+	"github.com/vanditshah99/lnd/macaroons"
+	"github.com/vanditshah99/lnd/walletunlocker"
 )
 
 var (

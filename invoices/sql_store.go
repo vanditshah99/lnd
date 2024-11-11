@@ -11,13 +11,13 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/clock"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
-	"github.com/lightningnetwork/lnd/sqldb"
-	"github.com/lightningnetwork/lnd/sqldb/sqlc"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/clock"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
+	"github.com/vanditshah99/lnd/sqldb"
+	"github.com/vanditshah99/lnd/sqldb/sqlc"
 )
 
 const (

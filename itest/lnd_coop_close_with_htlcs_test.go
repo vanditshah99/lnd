@@ -5,14 +5,14 @@ import (
 
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/invoicesrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/routerrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/walletrpc"
-	"github.com/lightningnetwork/lnd/lntest"
-	"github.com/lightningnetwork/lnd/lntest/wait"
-	"github.com/lightningnetwork/lnd/lntypes"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnrpc/invoicesrpc"
+	"github.com/vanditshah99/lnd/lnrpc/routerrpc"
+	"github.com/vanditshah99/lnd/lnrpc/walletrpc"
+	"github.com/vanditshah99/lnd/lntest"
+	"github.com/vanditshah99/lnd/lntest/wait"
+	"github.com/vanditshah99/lnd/lntypes"
 )
 
 // testCoopCloseWithHtlcs tests whether we can successfully issue a coop close

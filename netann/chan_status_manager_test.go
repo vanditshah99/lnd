@@ -13,12 +13,12 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/netann"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/netann"
 )
 
 var (

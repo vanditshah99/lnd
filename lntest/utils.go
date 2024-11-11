@@ -10,13 +10,13 @@ import (
 
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lntest/wait"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lntest/wait"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 const (

@@ -7,11 +7,11 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/htlcswitch/hop"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/htlcswitch/hop"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 var (

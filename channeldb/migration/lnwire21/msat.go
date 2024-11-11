@@ -5,7 +5,7 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 const (

@@ -5,7 +5,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
 )
 
 // TowerCandidateIterator provides an abstraction for iterating through possible

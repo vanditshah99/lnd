@@ -8,11 +8,11 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2/schnorr/musig2"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/mock"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // MockInput implements the `Input` interface and is used by other packages for

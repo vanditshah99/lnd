@@ -6,15 +6,15 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lightningnetwork/lnd"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/walletrpc"
-	"github.com/lightningnetwork/lnd/lntest"
-	"github.com/lightningnetwork/lnd/lntest/node"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnrpc/walletrpc"
+	"github.com/vanditshah99/lnd/lntest"
+	"github.com/vanditshah99/lnd/lntest/node"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 type chanFundMaxTestCase struct {

@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 var testPK, _ = btcec.ParsePubKey([]byte{0x02,

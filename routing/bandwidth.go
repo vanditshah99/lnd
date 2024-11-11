@@ -3,12 +3,12 @@ package routing
 import (
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/htlcswitch"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing/route"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/htlcswitch"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/routing/route"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // bandwidthHints provides hints about the currently available balance in our

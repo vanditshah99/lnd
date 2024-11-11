@@ -8,13 +8,13 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/blob"
-	"github.com/lightningnetwork/lnd/watchtower/wtclient"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtpolicy"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/watchtower/blob"
+	"github.com/vanditshah99/lnd/watchtower/wtclient"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/watchtower/wtpolicy"
 )
 
 const blobType = blob.TypeAltruistCommit

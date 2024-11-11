@@ -4,10 +4,10 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // CloseOutput represents an output that should be included in the close

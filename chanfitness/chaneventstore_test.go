@@ -7,11 +7,11 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/clock"
-	"github.com/lightningnetwork/lnd/routing/route"
-	"github.com/lightningnetwork/lnd/subscribe"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/clock"
+	"github.com/vanditshah99/lnd/routing/route"
+	"github.com/vanditshah99/lnd/subscribe"
 )
 
 // testNow is the current time tests will use.

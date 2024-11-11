@@ -3,8 +3,8 @@ package migration26
 import (
 	"fmt"
 
-	mig25 "github.com/lightningnetwork/lnd/channeldb/migration25"
-	"github.com/lightningnetwork/lnd/kvdb"
+	mig25 "github.com/vanditshah99/lnd/channeldb/migration25"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

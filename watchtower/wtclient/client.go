@@ -12,15 +12,15 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtpolicy"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
+	"github.com/vanditshah99/lnd/build"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/watchtower/wtpolicy"
+	"github.com/vanditshah99/lnd/watchtower/wtserver"
+	"github.com/vanditshah99/lnd/watchtower/wtwire"
 )
 
 const (

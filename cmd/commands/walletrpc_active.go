@@ -20,10 +20,10 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/lnrpc/walletrpc"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwallet/chanfunding"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc/walletrpc"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwallet/chanfunding"
 )
 
 var (

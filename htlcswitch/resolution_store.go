@@ -5,10 +5,10 @@ import (
 	"io"
 
 	"github.com/go-errors/errors"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/contractcourt"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/contractcourt"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 var (

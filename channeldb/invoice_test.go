@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	invpkg "github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	invpkg "github.com/vanditshah99/lnd/invoices"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 var testNow = time.Unix(1, 0)

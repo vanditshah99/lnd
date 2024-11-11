@@ -4,10 +4,10 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/amp"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing/shards"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/amp"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/routing/shards"
 )
 
 // TestAMPShardTracker tests that we can derive and cancel shards at will using

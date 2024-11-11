@@ -3,7 +3,7 @@ package lnwire
 import (
 	"io"
 
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // TrueBoolean is a record that indicates true or false using the presence of

@@ -9,9 +9,9 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr/musig2"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 const (

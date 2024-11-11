@@ -14,12 +14,12 @@ import (
 
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/integration/rpctest"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lntest"
-	"github.com/lightningnetwork/lnd/lntest/node"
-	"github.com/lightningnetwork/lnd/lntest/port"
-	"github.com/lightningnetwork/lnd/lntest/wait"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lntest"
+	"github.com/vanditshah99/lnd/lntest/node"
+	"github.com/vanditshah99/lnd/lntest/port"
+	"github.com/vanditshah99/lnd/lntest/wait"
 	"google.golang.org/grpc/grpclog"
 )
 

@@ -11,8 +11,8 @@ import (
 	"sync/atomic"
 
 	flags "github.com/jessevdk/go-flags"
-	"github.com/lightningnetwork/lnd"
-	"github.com/lightningnetwork/lnd/signal"
+	"github.com/vanditshah99/lnd"
+	"github.com/vanditshah99/lnd/signal"
 	_ "golang.org/x/mobile/bind"
 	"google.golang.org/grpc"
 )

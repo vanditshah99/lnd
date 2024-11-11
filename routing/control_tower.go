@@ -3,10 +3,10 @@ package routing
 import (
 	"sync"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/multimutex"
-	"github.com/lightningnetwork/lnd/queue"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/multimutex"
+	"github.com/vanditshah99/lnd/queue"
 )
 
 // DBMPPayment is an interface derived from channeldb.MPPayment that is used by

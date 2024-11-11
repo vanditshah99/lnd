@@ -7,8 +7,8 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
 )
 
 // ErrInsufficientFunds is a type matching the error interface which is

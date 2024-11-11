@@ -13,11 +13,11 @@ import (
 
 	"github.com/btcsuite/btcwallet/walletdb"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/record"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/record"
 )
 
 func genPreimage() ([32]byte, error) {

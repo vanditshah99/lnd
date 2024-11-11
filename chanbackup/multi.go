@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnencrypt"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lnencrypt"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // MultiBackupVersion denotes the version of the multi channel static channel

@@ -3,8 +3,8 @@ package wtwire
 import (
 	"io"
 
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/watchtower/blob"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/watchtower/blob"
 )
 
 // CreateSession is sent from a client to tower when to negotiate a session, which

@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/integration/rpctest"
-	"github.com/lightningnetwork/lnd/lntest/miner"
-	"github.com/lightningnetwork/lnd/lntest/node"
-	"github.com/lightningnetwork/lnd/lntest/wait"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lntest/miner"
+	"github.com/vanditshah99/lnd/lntest/node"
+	"github.com/vanditshah99/lnd/lntest/wait"
 )
 
 // SetupHarness creates a new HarnessTest with a series of setups such that the

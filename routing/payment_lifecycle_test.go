@@ -8,17 +8,17 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/go-errors/errors"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/htlcswitch"
-	"github.com/lightningnetwork/lnd/lnmock"
-	"github.com/lightningnetwork/lnd/lntest/wait"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
-	"github.com/lightningnetwork/lnd/routing/route"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/htlcswitch"
+	"github.com/vanditshah99/lnd/lnmock"
+	"github.com/vanditshah99/lnd/lntest/wait"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 // errDummy is used by the mockers to return a dummy error.

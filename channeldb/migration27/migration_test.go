@@ -8,11 +8,11 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
-	mig25 "github.com/lightningnetwork/lnd/channeldb/migration25"
-	mig26 "github.com/lightningnetwork/lnd/channeldb/migration26"
-	mig "github.com/lightningnetwork/lnd/channeldb/migration_01_to_11"
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
+	mig25 "github.com/vanditshah99/lnd/channeldb/migration25"
+	mig26 "github.com/vanditshah99/lnd/channeldb/migration26"
+	mig "github.com/vanditshah99/lnd/channeldb/migration_01_to_11"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

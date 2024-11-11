@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/record"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/record"
 )
 
 // PaymentShard is an interface representing a shard tracked by the

@@ -3,8 +3,8 @@ package rpc
 import (
 	"context"
 
-	"github.com/lightningnetwork/lnd/lnrpc/peersrpc"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnrpc/peersrpc"
 )
 
 // =====================

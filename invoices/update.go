@@ -6,10 +6,10 @@ import (
 	"errors"
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/amp"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
+	"github.com/vanditshah99/lnd/amp"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
 )
 
 // invoiceUpdateCtx is an object that describes the context for the invoice

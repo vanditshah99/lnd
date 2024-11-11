@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/tlv"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 var (

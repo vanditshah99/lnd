@@ -8,14 +8,14 @@ import (
 	"time"
 
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/kvdb/etcd"
-	"github.com/lightningnetwork/lnd/kvdb/postgres"
-	"github.com/lightningnetwork/lnd/kvdb/sqlbase"
-	"github.com/lightningnetwork/lnd/kvdb/sqlite"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwallet/btcwallet"
-	"github.com/lightningnetwork/lnd/sqldb"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/kvdb/etcd"
+	"github.com/vanditshah99/lnd/kvdb/postgres"
+	"github.com/vanditshah99/lnd/kvdb/sqlbase"
+	"github.com/vanditshah99/lnd/kvdb/sqlite"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnwallet/btcwallet"
+	"github.com/vanditshah99/lnd/sqldb"
 )
 
 const (

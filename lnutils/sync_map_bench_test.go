@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/lnutils"
+	"github.com/vanditshah99/lnd/lnutils"
 )
 
 func BenchmarkReadMutexMap(b *testing.B) {

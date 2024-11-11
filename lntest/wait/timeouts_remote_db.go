@@ -8,7 +8,7 @@ import "time"
 const (
 	// extraTimeout is the additional time we wait for the postgres backend
 	// until the issue is resolved:
-	// - https://github.com/lightningnetwork/lnd/issues/8809
+	// - https://github.com/vanditshah99/lnd/issues/8809
 	extraTimeout = time.Second * 30
 
 	// MinerMempoolTimeout is the max time we will wait for a transaction

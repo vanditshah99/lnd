@@ -5,11 +5,11 @@ import (
 	"strconv"
 
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lightningnetwork/lnd/lnrpc/routerrpc"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing"
-	"github.com/lightningnetwork/lnd/routing/route"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc/routerrpc"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/routing"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 var getCfgCommand = cli.Command{

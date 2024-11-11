@@ -8,15 +8,15 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/chainrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/signrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/walletrpc"
-	"github.com/lightningnetwork/lnd/lntest"
-	"github.com/lightningnetwork/lnd/lntest/node"
-	"github.com/lightningnetwork/lnd/lntest/wait"
-	"github.com/lightningnetwork/lnd/lnwallet"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnrpc/chainrpc"
+	"github.com/vanditshah99/lnd/lnrpc/signrpc"
+	"github.com/vanditshah99/lnd/lnrpc/walletrpc"
+	"github.com/vanditshah99/lnd/lntest"
+	"github.com/vanditshah99/lnd/lntest/node"
+	"github.com/vanditshah99/lnd/lntest/wait"
+	"github.com/vanditshah99/lnd/lnwallet"
 )
 
 // testChainKit tests ChainKit RPC endpoints.

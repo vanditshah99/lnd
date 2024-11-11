@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/channeldb/migration"
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/channeldb/migration"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 // TestCreateTLB asserts that a CreateTLB properly initializes a new top-level

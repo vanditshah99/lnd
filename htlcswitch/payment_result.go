@@ -7,10 +7,10 @@ import (
 	"io"
 	"sync"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/multimutex"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/multimutex"
 )
 
 var (

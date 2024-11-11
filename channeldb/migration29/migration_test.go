@@ -3,8 +3,8 @@ package migration29
 import (
 	"testing"
 
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

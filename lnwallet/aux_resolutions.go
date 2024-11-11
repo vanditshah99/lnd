@@ -3,10 +3,10 @@ package lnwallet
 import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // CloseType is an enum that represents the type of close that we are trying to

@@ -10,16 +10,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/clock"
-	"github.com/lightningnetwork/lnd/feature"
-	invpkg "github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
-	"github.com/lightningnetwork/lnd/sqldb"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/clock"
+	"github.com/vanditshah99/lnd/feature"
+	invpkg "github.com/vanditshah99/lnd/invoices"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
+	"github.com/vanditshah99/lnd/sqldb"
 )
 
 var (

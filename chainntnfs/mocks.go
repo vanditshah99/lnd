@@ -3,8 +3,8 @@ package chainntnfs
 import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/fn"
 	"github.com/stretchr/testify/mock"
+	"github.com/vanditshah99/lnd/fn"
 )
 
 // MockMempoolWatcher is a mock implementation of the MempoolWatcher interface.

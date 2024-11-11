@@ -10,17 +10,17 @@ import (
 	"testing/quick"
 	"time"
 
-	"github.com/lightningnetwork/lnd/amp"
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/clock"
-	invpkg "github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lntest/wait"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
-	"github.com/lightningnetwork/lnd/sqldb"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/amp"
+	"github.com/vanditshah99/lnd/chainntnfs"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/clock"
+	invpkg "github.com/vanditshah99/lnd/invoices"
+	"github.com/vanditshah99/lnd/lntest/wait"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
+	"github.com/vanditshah99/lnd/sqldb"
 )
 
 var (

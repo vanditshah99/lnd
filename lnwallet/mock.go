@@ -16,12 +16,12 @@ import (
 	base "github.com/btcsuite/btcwallet/wallet"
 	"github.com/btcsuite/btcwallet/wallet/txauthor"
 	"github.com/btcsuite/btcwallet/wtxmgr"
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/mock"
+	"github.com/vanditshah99/lnd/chainntnfs"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 var (

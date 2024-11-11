@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet"
 )
 
 type commitSortTest struct {

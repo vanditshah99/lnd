@@ -6,12 +6,12 @@ package walletrpc
 import (
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/macaroons"
-	"github.com/lightningnetwork/lnd/sweep"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/macaroons"
+	"github.com/vanditshah99/lnd/sweep"
 )
 
 const (

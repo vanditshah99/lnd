@@ -1,7 +1,7 @@
 package lnwallet
 
 import (
-	"github.com/lightningnetwork/lnd/fn"
+	"github.com/vanditshah99/lnd/fn"
 )
 
 // updateLog is an append-only log that stores updates to a node's commitment

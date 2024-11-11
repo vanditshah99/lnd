@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
 )
 
 // Interface represents a simple, listen-only service that accepts watchtower

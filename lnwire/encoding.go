@@ -1,6 +1,6 @@
 package lnwire
 
-import "github.com/lightningnetwork/lnd/tlv"
+import "github.com/vanditshah99/lnd/tlv"
 
 // QueryEncoding is an enum-like type that represents exactly how a set data is
 // encoded on the wire.

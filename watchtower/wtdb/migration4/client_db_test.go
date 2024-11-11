@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcwallet/walletdb"
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

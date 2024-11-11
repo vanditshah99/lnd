@@ -13,14 +13,14 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnmock"
-	"github.com/lightningnetwork/lnd/lntest/channels"
-	"github.com/lightningnetwork/lnd/lnwallet"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnmock"
+	"github.com/vanditshah99/lnd/lntest/channels"
+	"github.com/vanditshah99/lnd/lnwallet"
 )
 
 var (

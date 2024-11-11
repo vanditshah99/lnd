@@ -3,10 +3,10 @@ package wtdb_test
 import (
 	"testing"
 
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
 )
 
 // TestDiskQueue ensures that the ClientDBs disk queue methods behave as is

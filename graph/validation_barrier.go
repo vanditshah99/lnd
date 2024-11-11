@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing/route"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 // validationSignals contains two signals which allows the ValidationBarrier to

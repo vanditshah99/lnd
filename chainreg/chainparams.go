@@ -3,7 +3,7 @@ package chainreg
 import (
 	bitcoinCfg "github.com/btcsuite/btcd/chaincfg"
 	bitcoinWire "github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/keychain"
+	"github.com/vanditshah99/lnd/keychain"
 )
 
 // BitcoinNetParams couples the p2p parameters of a network with the

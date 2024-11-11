@@ -14,23 +14,23 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/go-errors/errors"
-	"github.com/lightningnetwork/lnd/batch"
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnutils"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/btcwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/chanvalidate"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/multimutex"
-	"github.com/lightningnetwork/lnd/netann"
-	"github.com/lightningnetwork/lnd/routing/chainview"
-	"github.com/lightningnetwork/lnd/routing/route"
-	"github.com/lightningnetwork/lnd/ticker"
+	"github.com/vanditshah99/lnd/batch"
+	"github.com/vanditshah99/lnd/chainntnfs"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnutils"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet/btcwallet"
+	"github.com/vanditshah99/lnd/lnwallet/chanvalidate"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/multimutex"
+	"github.com/vanditshah99/lnd/netann"
+	"github.com/vanditshah99/lnd/routing/chainview"
+	"github.com/vanditshah99/lnd/routing/route"
+	"github.com/vanditshah99/lnd/ticker"
 )
 
 const (
@@ -768,7 +768,7 @@ func (b *Builder) networkHandler() {
 	// subsystems or basic rpc calls that rely on calls such as GetBestBlock
 	// will hang due to excessive load.
 	//
-	// See https://github.com/lightningnetwork/lnd/issues/4892.
+	// See https://github.com/vanditshah99/lnd/issues/4892.
 	var validationBarrier *ValidationBarrier
 	if b.cfg.AssumeChannelValid {
 		validationBarrier = NewValidationBarrier(1000, b.quit)

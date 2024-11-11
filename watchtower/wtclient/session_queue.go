@@ -8,12 +8,12 @@ import (
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/watchtower/wtserver"
+	"github.com/vanditshah99/lnd/watchtower/wtwire"
 )
 
 // sessionQueueStatus is an enum that signals how full a particular session is.

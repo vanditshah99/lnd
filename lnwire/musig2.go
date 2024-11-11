@@ -4,7 +4,7 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/btcec/v2/schnorr/musig2"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // NonceRecordTypeT is the TLV type used to encode a local musig2 nonce.

@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/fn"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/fn"
 )
 
 var (

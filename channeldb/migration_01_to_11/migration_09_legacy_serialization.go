@@ -7,9 +7,9 @@ import (
 	"io"
 	"sort"
 
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lntypes"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lntypes"
 )
 
 var (

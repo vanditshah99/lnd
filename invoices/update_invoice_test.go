@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
 )
 
 type updateHTLCTest struct {

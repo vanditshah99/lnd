@@ -2,9 +2,9 @@ package itest
 
 import (
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lightningnetwork/lnd/funding"
-	"github.com/lightningnetwork/lnd/lntest"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/funding"
+	"github.com/vanditshah99/lnd/lntest"
+	"github.com/vanditshah99/lnd/lnwallet"
 )
 
 // testWumboChannels tests that only a node that signals wumbo channel

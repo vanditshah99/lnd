@@ -6,9 +6,9 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // EmptyOutPoint is a zeroed outpoint.

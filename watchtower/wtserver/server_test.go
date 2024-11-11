@@ -10,13 +10,13 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/txscript"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/watchtower/blob"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
-	"github.com/lightningnetwork/lnd/watchtower/wtmock"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/watchtower/blob"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/watchtower/wtmock"
+	"github.com/vanditshah99/lnd/watchtower/wtserver"
+	"github.com/vanditshah99/lnd/watchtower/wtwire"
 )
 
 var (

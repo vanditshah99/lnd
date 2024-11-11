@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/chainreg"
-	"github.com/lightningnetwork/lnd/routing"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/chainreg"
+	"github.com/vanditshah99/lnd/routing"
 )
 
 var (

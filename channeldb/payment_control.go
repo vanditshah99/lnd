@@ -8,8 +8,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lntypes"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lntypes"
 )
 
 const (

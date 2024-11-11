@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lightningnetwork/lnd/lnrpc/wtclientrpc"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc/wtclientrpc"
 )
 
 // wtclientCommands is a list of commands that can be used to interact with the

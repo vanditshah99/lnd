@@ -3,8 +3,8 @@ package rpc
 import (
 	"context"
 
-	"github.com/lightningnetwork/lnd/lnrpc/watchtowerrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/wtclientrpc"
+	"github.com/vanditshah99/lnd/lnrpc/watchtowerrpc"
+	"github.com/vanditshah99/lnd/lnrpc/wtclientrpc"
 )
 
 // =====================

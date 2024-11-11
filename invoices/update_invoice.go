@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // updateHtlcsAmp takes an invoice, and a new HTLC to be added (along with its

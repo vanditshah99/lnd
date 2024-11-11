@@ -5,7 +5,7 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // OnionPacketSize is the size of the serialized Sphinx onion packet included

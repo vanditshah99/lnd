@@ -16,9 +16,9 @@ import (
 	"github.com/btcsuite/btcd/integration/rpctest"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lntest/unittest"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lntest/unittest"
 )
 
 var (

@@ -2,7 +2,7 @@ package chainreg
 
 import (
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/build"
+	"github.com/vanditshah99/lnd/build"
 )
 
 // Subsystem defines the logging code for this subsystem.

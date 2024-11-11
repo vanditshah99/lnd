@@ -14,8 +14,8 @@ import (
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/integration/rpctest"
 	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/lightningnetwork/lnd/lntest/miner"
-	"github.com/lightningnetwork/lnd/lntest/node"
+	"github.com/vanditshah99/lnd/lntest/miner"
+	"github.com/vanditshah99/lnd/lntest/node"
 )
 
 // logDirPattern is the pattern of the name of the temporary log directory.

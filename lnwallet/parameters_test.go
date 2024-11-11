@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/lnwire"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // TestDefaultRoutingFeeLimitForAmount tests that we use the correct default

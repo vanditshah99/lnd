@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/htlcswitch/hop"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/htlcswitch/hop"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
 	"golang.org/x/exp/maps"
 )
 

@@ -1,9 +1,9 @@
 package routerrpc
 
 import (
-	"github.com/lightningnetwork/lnd/aliasmgr"
-	"github.com/lightningnetwork/lnd/macaroons"
-	"github.com/lightningnetwork/lnd/routing"
+	"github.com/vanditshah99/lnd/aliasmgr"
+	"github.com/vanditshah99/lnd/macaroons"
+	"github.com/vanditshah99/lnd/routing"
 )
 
 // Config is the main configuration file for the router RPC server. It contains

@@ -13,9 +13,9 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-errors/errors"
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lntypes"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lntypes"
 )
 
 // TestPaymentStatusesMigration checks that already completed payments will have

@@ -3,7 +3,7 @@ package contractcourt
 import (
 	"testing"
 
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 func TestMain(m *testing.M) {

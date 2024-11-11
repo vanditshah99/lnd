@@ -8,8 +8,8 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/lnpeer"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/lnpeer"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // mockPeer implements the lnpeer.Peer interface and is used to test the

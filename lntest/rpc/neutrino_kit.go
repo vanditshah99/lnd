@@ -3,7 +3,7 @@ package rpc
 import (
 	"context"
 
-	"github.com/lightningnetwork/lnd/lnrpc/neutrinorpc"
+	"github.com/vanditshah99/lnd/lnrpc/neutrinorpc"
 )
 
 // =====================

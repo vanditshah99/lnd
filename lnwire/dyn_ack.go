@@ -5,8 +5,8 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/btcec/v2/schnorr/musig2"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 const (

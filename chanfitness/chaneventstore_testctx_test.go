@@ -7,14 +7,14 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channelnotifier"
-	"github.com/lightningnetwork/lnd/clock"
-	"github.com/lightningnetwork/lnd/peernotifier"
-	"github.com/lightningnetwork/lnd/routing/route"
-	"github.com/lightningnetwork/lnd/subscribe"
-	"github.com/lightningnetwork/lnd/ticker"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channelnotifier"
+	"github.com/vanditshah99/lnd/clock"
+	"github.com/vanditshah99/lnd/peernotifier"
+	"github.com/vanditshah99/lnd/routing/route"
+	"github.com/vanditshah99/lnd/subscribe"
+	"github.com/vanditshah99/lnd/ticker"
 )
 
 // timeout is the amount of time we allow our blocking test calls.

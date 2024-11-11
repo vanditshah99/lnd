@@ -3,7 +3,7 @@ package migration33
 import (
 	"bytes"
 
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

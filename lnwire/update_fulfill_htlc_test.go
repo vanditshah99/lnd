@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // testCaseUpdateFulfill is a test case for the UpdateFulfillHTLC message.

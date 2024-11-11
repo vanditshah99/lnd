@@ -3,8 +3,8 @@ package commands
 import (
 	"errors"
 
-	"github.com/lightningnetwork/lnd/lnrpc/routerrpc"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc/routerrpc"
 )
 
 var updateChanStatusCommand = cli.Command{

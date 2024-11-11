@@ -8,10 +8,10 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btcwallet/chain"
 	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/lightningnetwork/lnd/lnmock"
-	"github.com/lightningnetwork/lnd/lnwallet"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnmock"
+	"github.com/vanditshah99/lnd/lnwallet"
 )
 
 type previousOutpointsTest struct {

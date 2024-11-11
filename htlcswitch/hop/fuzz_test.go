@@ -5,9 +5,9 @@ import (
 	"errors"
 	"testing"
 
-	sphinx "github.com/lightningnetwork/lightning-onion"
-	"github.com/lightningnetwork/lnd/routing/route"
 	"github.com/stretchr/testify/require"
+	sphinx "github.com/vanditshah99/lightning-onion"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 const (

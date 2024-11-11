@@ -4,8 +4,8 @@
 package commands
 
 import (
-	"github.com/lightningnetwork/lnd/lnrpc/autopilotrpc"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc/autopilotrpc"
 )
 
 func getAutopilotClient(ctx *cli.Context) (autopilotrpc.AutopilotClient, func()) {

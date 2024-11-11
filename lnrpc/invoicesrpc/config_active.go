@@ -5,11 +5,11 @@ package invoicesrpc
 
 import (
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/macaroons"
-	"github.com/lightningnetwork/lnd/netann"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/invoices"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/macaroons"
+	"github.com/vanditshah99/lnd/netann"
 	"google.golang.org/protobuf/proto"
 )
 

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 // MigrateMCRouteSerialisation reads all the mission control store entries and

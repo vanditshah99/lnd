@@ -3,7 +3,7 @@ package signrpc
 import (
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/input"
+	"github.com/vanditshah99/lnd/input"
 )
 
 // UnmarshalMuSig2Version parses the RPC MuSig2 version into the native

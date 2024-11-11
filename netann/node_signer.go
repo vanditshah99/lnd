@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lnwallet"
 )
 
 // NodeSigner is an implementation of the MessageSigner interface backed by the

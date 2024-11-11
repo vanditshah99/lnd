@@ -3,7 +3,7 @@ package routing
 import (
 	"time"
 
-	"github.com/lightningnetwork/lnd/routing/route"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 // missionControlState is an object that manages the internal mission control

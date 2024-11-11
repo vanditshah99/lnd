@@ -3,8 +3,8 @@ package wtclient
 import (
 	"sync"
 
-	"github.com/lightningnetwork/lnd/queue"
-	"github.com/lightningnetwork/lnd/watchtower/wtdb"
+	"github.com/vanditshah99/lnd/queue"
+	"github.com/vanditshah99/lnd/watchtower/wtdb"
 )
 
 // sessionCloseMinHeap is a thread-safe min-heap implementation that stores

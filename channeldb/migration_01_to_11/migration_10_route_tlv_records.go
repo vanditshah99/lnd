@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/lightningnetwork/lnd/kvdb"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 // MigrateRouteSerialization migrates the way we serialize routes across the

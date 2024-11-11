@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/lntypes"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lntypes"
 )
 
 // TestDecidePaymentStatus checks that given a set of HTLC and a failure

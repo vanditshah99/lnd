@@ -7,8 +7,8 @@
 package walletrpc
 
 import (
-	lnrpc "github.com/lightningnetwork/lnd/lnrpc"
-	signrpc "github.com/lightningnetwork/lnd/lnrpc/signrpc"
+	lnrpc "github.com/vanditshah99/lnd/lnrpc"
+	signrpc "github.com/vanditshah99/lnd/lnrpc/signrpc"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

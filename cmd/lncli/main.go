@@ -4,7 +4,7 @@
 
 package main
 
-import "github.com/lightningnetwork/lnd/cmd/commands"
+import "github.com/vanditshah99/lnd/cmd/commands"
 
 func main() {
 	commands.Main()

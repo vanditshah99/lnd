@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	mig "github.com/lightningnetwork/lnd/channeldb/migration_01_to_11"
-	"github.com/lightningnetwork/lnd/kvdb"
+	mig "github.com/vanditshah99/lnd/channeldb/migration_01_to_11"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

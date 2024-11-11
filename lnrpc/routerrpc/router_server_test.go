@@ -6,13 +6,13 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/queue"
-	"github.com/lightningnetwork/lnd/routing"
-	"github.com/lightningnetwork/lnd/zpay32"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/queue"
+	"github.com/vanditshah99/lnd/routing"
+	"github.com/vanditshah99/lnd/zpay32"
 	"google.golang.org/grpc"
 )
 

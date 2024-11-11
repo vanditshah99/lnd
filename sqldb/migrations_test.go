@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/sqldb/sqlc"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/sqldb/sqlc"
 )
 
 // makeMigrationTestDB is a type alias for a function that creates a new test

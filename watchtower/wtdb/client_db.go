@@ -9,11 +9,11 @@ import (
 	"sync"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/tlv"
-	"github.com/lightningnetwork/lnd/watchtower/blob"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/tlv"
+	"github.com/vanditshah99/lnd/watchtower/blob"
 )
 
 var (

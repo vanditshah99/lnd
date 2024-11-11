@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 func randResolverCtrlBlocks(t *testing.T) resolverCtrlBlocks {

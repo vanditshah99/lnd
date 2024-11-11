@@ -8,9 +8,9 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	bitcoinCfg "github.com/btcsuite/btcd/chaincfg"
-	"github.com/lightningnetwork/lnd/kvdb"
-	"github.com/lightningnetwork/lnd/zpay32"
 	litecoinCfg "github.com/ltcsuite/ltcd/chaincfg"
+	"github.com/vanditshah99/lnd/kvdb"
+	"github.com/vanditshah99/lnd/zpay32"
 )
 
 var (

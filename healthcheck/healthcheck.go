@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/lightningnetwork/lnd/ticker"
+	"github.com/vanditshah99/lnd/ticker"
 )
 
 var noOpCallback = func() {}

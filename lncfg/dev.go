@@ -5,7 +5,7 @@ package lncfg
 import (
 	"time"
 
-	"github.com/lightningnetwork/lnd/lnwallet/chanfunding"
+	"github.com/vanditshah99/lnd/lnwallet/chanfunding"
 )
 
 // IsDevBuild returns a bool to indicate whether we are in a development

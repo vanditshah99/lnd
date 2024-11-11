@@ -3,9 +3,9 @@ package sweep
 import (
 	"testing"
 
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
 )
 
 // TestLinearFeeFunctionNewMaxFeeRateUsed tests when the conf target is <= 1,

@@ -3,9 +3,9 @@ package channeldb_test
 import (
 	"testing"
 
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/kvdb"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 // TestDefaultOptions tests the default options are created as intended.

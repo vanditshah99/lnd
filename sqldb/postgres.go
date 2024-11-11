@@ -11,7 +11,7 @@ import (
 	pgx_migrate "github.com/golang-migrate/migrate/v4/database/pgx/v5"
 	_ "github.com/golang-migrate/migrate/v4/source/file" // Read migrations from files. // nolint:lll
 	_ "github.com/jackc/pgx/v5"
-	"github.com/lightningnetwork/lnd/sqldb/sqlc"
+	"github.com/vanditshah99/lnd/sqldb/sqlc"
 )
 
 var (

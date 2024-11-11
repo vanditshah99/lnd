@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // TestCustomRecords tests the custom records serialization and deserialization,

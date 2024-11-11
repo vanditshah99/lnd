@@ -5,13 +5,13 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/lnutils"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/netann"
-	"github.com/lightningnetwork/lnd/routing/route"
+	"github.com/vanditshah99/lnd/build"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/lnutils"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/netann"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 // BlockPadding is used to increment the finalCltvDelta value for the last hop

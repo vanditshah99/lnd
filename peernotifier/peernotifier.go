@@ -3,7 +3,7 @@ package peernotifier
 import (
 	"sync"
 
-	"github.com/lightningnetwork/lnd/subscribe"
+	"github.com/vanditshah99/lnd/subscribe"
 )
 
 // PeerNotifier is a subsystem which observes peer offline and online events.

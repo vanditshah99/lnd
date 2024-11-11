@@ -2,7 +2,7 @@ package peer
 
 import (
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/build"
+	"github.com/vanditshah99/lnd/build"
 )
 
 // peerLog is a logger that is initialized with the btclog.Disabled logger.

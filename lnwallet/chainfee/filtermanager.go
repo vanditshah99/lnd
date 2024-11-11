@@ -9,7 +9,7 @@ import (
 
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/lightningnetwork/lnd/fn"
+	"github.com/vanditshah99/lnd/fn"
 )
 
 const (

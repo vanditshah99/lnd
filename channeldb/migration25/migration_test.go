@@ -9,11 +9,11 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	mig24 "github.com/lightningnetwork/lnd/channeldb/migration24"
-	mig "github.com/lightningnetwork/lnd/channeldb/migration_01_to_11"
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	mig24 "github.com/vanditshah99/lnd/channeldb/migration24"
+	mig "github.com/vanditshah99/lnd/channeldb/migration_01_to_11"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

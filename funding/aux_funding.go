@@ -2,10 +2,10 @@ package funding
 
 import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/msgmux"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/msgmux"
 )
 
 // AuxFundingDescResult is a type alias for a function that returns an optional

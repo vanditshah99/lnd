@@ -2,7 +2,7 @@ package hop
 
 import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // ForwardingInfo contains all the information that is necessary to forward and

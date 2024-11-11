@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 type (

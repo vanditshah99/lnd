@@ -11,10 +11,10 @@ import (
 
 	"github.com/andybalholm/brotli"
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd"
-	"github.com/lightningnetwork/lnd/lnencrypt"
-	"github.com/lightningnetwork/lnd/lnrpc"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd"
+	"github.com/vanditshah99/lnd/lnencrypt"
+	"github.com/vanditshah99/lnd/lnrpc"
 	"google.golang.org/protobuf/proto"
 )
 

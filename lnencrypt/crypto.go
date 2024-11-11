@@ -7,7 +7,7 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/keychain"
+	"github.com/vanditshah99/lnd/keychain"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 

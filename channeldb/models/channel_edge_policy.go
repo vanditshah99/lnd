@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // ChannelEdgePolicy represents a *directed* edge within the channel graph. For

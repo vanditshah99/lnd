@@ -23,19 +23,19 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btclog/v2"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/chainntnfs"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/keychain"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnutils"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/shachain"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/build"
+	"github.com/vanditshah99/lnd/chainntnfs"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/keychain"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnutils"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/shachain"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 var (
@@ -3548,7 +3548,7 @@ const (
 	// of the channel not being able to add a non-dust htlc to the channel
 	// state because we as a channel opener cannot pay the additional fees
 	// an htlc would require on the commitment tx.
-	// See: https://github.com/lightningnetwork/lightning-rfc/issues/728
+	// See: https://github.com/vanditshah99/lightning-rfc/issues/728
 	//
 	// Moreover it mitigates the situation where htlcs are added
 	// simultaneously to the commitment transaction. This cannot be avoided
@@ -3556,7 +3556,7 @@ const (
 	// protocol and deployed widely in the network.
 	// More information about the issue and the simplified commitment flow
 	// can be found here:
-	// https://github.com/lightningnetwork/lnd/issues/7657
+	// https://github.com/vanditshah99/lnd/issues/7657
 	// https://github.com/lightning/bolts/pull/867
 	//
 	// The last advantage is that we can react to fee spikes (up or down)
@@ -3766,7 +3766,7 @@ func (lc *LightningChannel) validateCommitmentSanity(theirLogCounter,
 	// when e.g. a new channel (bigger capacity) has a higher required
 	// reserve and the peer would need to add an additional htlc to push the
 	// missing amount to our side and viceversa.
-	// See: https://github.com/lightningnetwork/lnd/issues/8249
+	// See: https://github.com/vanditshah99/lnd/issues/8249
 	case ourBalance < ourInitialBalance && ourBalance < ourReserve:
 		lc.log.Debugf("Funds below chan reserve: ourBalance=%v, "+
 			"ourReserve=%v, commitFee=%v, feeBuffer=%v "+

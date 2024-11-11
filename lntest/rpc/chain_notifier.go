@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	"github.com/lightningnetwork/lnd/lnrpc/chainrpc"
+	"github.com/vanditshah99/lnd/lnrpc/chainrpc"
 )
 
 // =====================

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/lightningnetwork/lnd/lnrpc/routerrpc"
-	"github.com/lightningnetwork/lnd/routing/route"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc/routerrpc"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 const argsStr = "[source node] [dest node] [unix ts seconds] [amount in msat]"

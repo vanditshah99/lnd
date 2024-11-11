@@ -2,7 +2,7 @@ package walletrpc
 
 import (
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/build"
+	"github.com/vanditshah99/lnd/build"
 )
 
 // log is a logger that is initialized with no output filters. This means the

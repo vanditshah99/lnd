@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/invoices"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // htlcModifier is a helper struct that handles the lifecycle of an RPC invoice

@@ -5,11 +5,11 @@ import (
 	"io"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/tlv"
-	"github.com/lightningnetwork/lnd/watchtower/blob"
-	"github.com/lightningnetwork/lnd/watchtower/wtwire"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/tlv"
+	"github.com/vanditshah99/lnd/watchtower/blob"
+	"github.com/vanditshah99/lnd/watchtower/wtwire"
 )
 
 // CreateSessionTLV mirrors the wtwire.CreateSession message, but uses TLV for

@@ -6,8 +6,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 const (

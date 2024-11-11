@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/tlv"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 type parsedTypeTest struct {

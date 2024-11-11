@@ -14,24 +14,24 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/btcsuite/btclog/v2"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/contractcourt"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/htlcswitch/hodl"
-	"github.com/lightningnetwork/lnd/htlcswitch/hop"
-	"github.com/lightningnetwork/lnd/input"
-	"github.com/lightningnetwork/lnd/invoices"
-	"github.com/lightningnetwork/lnd/lnpeer"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnutils"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/queue"
-	"github.com/lightningnetwork/lnd/ticker"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/build"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/contractcourt"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/htlcswitch/hodl"
+	"github.com/vanditshah99/lnd/htlcswitch/hop"
+	"github.com/vanditshah99/lnd/input"
+	"github.com/vanditshah99/lnd/invoices"
+	"github.com/vanditshah99/lnd/lnpeer"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnutils"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/queue"
+	"github.com/vanditshah99/lnd/ticker"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 func init() {
@@ -1953,7 +1953,7 @@ func (l *channelLink) handleUpstreamMsg(msg lnwire.Message) {
 			// hit this case in situations where we improperly
 			// handle message ordering due to concurrency choices.
 			// An issue has been filed to address this here:
-			// https://github.com/lightningnetwork/lnd/issues/8393
+			// https://github.com/vanditshah99/lnd/issues/8393
 			l.failf(
 				LinkFailureError{
 					code:             ErrInvalidUpdate,

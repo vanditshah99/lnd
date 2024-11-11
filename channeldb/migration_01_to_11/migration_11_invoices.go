@@ -8,10 +8,10 @@ import (
 
 	bitcoinCfg "github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/wire"
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	"github.com/lightningnetwork/lnd/channeldb/migration_01_to_11/zpay32"
-	"github.com/lightningnetwork/lnd/kvdb"
 	litecoinCfg "github.com/ltcsuite/ltcd/chaincfg"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	"github.com/vanditshah99/lnd/channeldb/migration_01_to_11/zpay32"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 // MigrateInvoices adds invoice htlcs and a separate cltv delta field to the

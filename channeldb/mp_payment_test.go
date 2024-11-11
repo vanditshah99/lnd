@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/routing/route"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/routing/route"
 )
 
 // TestLazySessionKeyDeserialize tests that we can read htlc attempt session

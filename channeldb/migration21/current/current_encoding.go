@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"io"
 
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	"github.com/lightningnetwork/lnd/channeldb/migration21/common"
-	"github.com/lightningnetwork/lnd/kvdb"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	"github.com/vanditshah99/lnd/channeldb/migration21/common"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 func serializeChanCommit(w io.Writer, c *common.ChannelCommitment) error { // nolint: dupl

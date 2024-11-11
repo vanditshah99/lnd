@@ -14,8 +14,8 @@ import (
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // DecodeOption is a type that can be used to supply functional options to the
@@ -94,7 +94,7 @@ func Decode(invoice string, net *chaincfg.Params, opts ...DecodeOption) (
 	// an additional "s" to differentiate it from the older testnet3 (Core
 	// devs decided to use the same hrp for signet as for testnet3 which is
 	// not optimal for LN). See
-	// https://github.com/lightningnetwork/lightning-rfc/pull/844 for more
+	// https://github.com/vanditshah99/lightning-rfc/pull/844 for more
 	// information.
 	expectedPrefix := net.Bech32HRPSegwit
 	if net.Name == chaincfg.SigNetParams.Name {

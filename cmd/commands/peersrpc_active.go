@@ -6,9 +6,9 @@ package commands
 import (
 	"fmt"
 
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/peersrpc"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnrpc/peersrpc"
 )
 
 // peersCommands will return the set of commands to enable for peersrpc

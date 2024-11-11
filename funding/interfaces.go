@@ -1,8 +1,8 @@
 package funding
 
 import (
-	"github.com/lightningnetwork/lnd/lnpeer"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/lnpeer"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 // Controller is an interface with basic funding flow functions.

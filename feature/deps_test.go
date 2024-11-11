@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/lnwire"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 type depTest struct {

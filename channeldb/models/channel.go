@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 const (

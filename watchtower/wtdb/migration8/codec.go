@@ -8,7 +8,7 @@ import (
 	"io"
 
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // BreachHintSize is the length of the identifier used to detect remote

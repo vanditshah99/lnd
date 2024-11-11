@@ -12,12 +12,12 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/davecgh/go-spew/spew"
-	lnwire "github.com/lightningnetwork/lnd/channeldb/migration/lnwire21"
-	"github.com/lightningnetwork/lnd/channeldb/migration21/common"
-	"github.com/lightningnetwork/lnd/channeldb/migration21/current"
-	"github.com/lightningnetwork/lnd/channeldb/migration21/legacy"
-	"github.com/lightningnetwork/lnd/channeldb/migtest"
-	"github.com/lightningnetwork/lnd/kvdb"
+	lnwire "github.com/vanditshah99/lnd/channeldb/migration/lnwire21"
+	"github.com/vanditshah99/lnd/channeldb/migration21/common"
+	"github.com/vanditshah99/lnd/channeldb/migration21/current"
+	"github.com/vanditshah99/lnd/channeldb/migration21/legacy"
+	"github.com/vanditshah99/lnd/channeldb/migtest"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 var (

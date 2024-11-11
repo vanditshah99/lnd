@@ -5,8 +5,8 @@ import (
 	"github.com/btcsuite/btcwallet/chain"
 	btcwallet "github.com/btcsuite/btcwallet/wallet"
 	"github.com/btcsuite/btcwallet/wtxmgr"
-	"github.com/lightningnetwork/lnd/build"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/build"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
 )
 
 // walletLog is a logger that is initialized with no output filters.  This

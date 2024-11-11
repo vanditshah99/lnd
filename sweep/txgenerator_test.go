@@ -5,8 +5,8 @@ import (
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/input"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/input"
 )
 
 var (

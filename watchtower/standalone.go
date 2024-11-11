@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/btcec/v2"
-	"github.com/lightningnetwork/lnd/brontide"
-	"github.com/lightningnetwork/lnd/lnencrypt"
-	"github.com/lightningnetwork/lnd/tor"
-	"github.com/lightningnetwork/lnd/watchtower/lookout"
-	"github.com/lightningnetwork/lnd/watchtower/wtserver"
+	"github.com/vanditshah99/lnd/brontide"
+	"github.com/vanditshah99/lnd/lnencrypt"
+	"github.com/vanditshah99/lnd/tor"
+	"github.com/vanditshah99/lnd/watchtower/lookout"
+	"github.com/vanditshah99/lnd/watchtower/wtserver"
 )
 
 // Standalone encapsulates the server-side functionality required by watchtower

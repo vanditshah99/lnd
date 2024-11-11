@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/lightningnetwork/lnd/lncfg"
-	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/lnrpc/devrpc"
 	"github.com/urfave/cli"
+	"github.com/vanditshah99/lnd/lncfg"
+	"github.com/vanditshah99/lnd/lnrpc"
+	"github.com/vanditshah99/lnd/lnrpc/devrpc"
 )
 
 // devCommands will return the set of commands to enable for devrpc builds.

@@ -3,9 +3,9 @@ package msgmux
 import (
 	"testing"
 
-	"github.com/lightningnetwork/lnd/lnwire"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 type mockEndpoint struct {

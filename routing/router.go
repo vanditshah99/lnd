@@ -15,22 +15,22 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-errors/errors"
-	sphinx "github.com/lightningnetwork/lightning-onion"
-	"github.com/lightningnetwork/lnd/amp"
-	"github.com/lightningnetwork/lnd/channeldb"
-	"github.com/lightningnetwork/lnd/channeldb/models"
-	"github.com/lightningnetwork/lnd/clock"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/htlcswitch"
-	"github.com/lightningnetwork/lnd/lntypes"
-	"github.com/lightningnetwork/lnd/lnutils"
-	"github.com/lightningnetwork/lnd/lnwallet"
-	"github.com/lightningnetwork/lnd/lnwire"
-	"github.com/lightningnetwork/lnd/record"
-	"github.com/lightningnetwork/lnd/routing/route"
-	"github.com/lightningnetwork/lnd/routing/shards"
-	"github.com/lightningnetwork/lnd/tlv"
-	"github.com/lightningnetwork/lnd/zpay32"
+	sphinx "github.com/vanditshah99/lightning-onion"
+	"github.com/vanditshah99/lnd/amp"
+	"github.com/vanditshah99/lnd/channeldb"
+	"github.com/vanditshah99/lnd/channeldb/models"
+	"github.com/vanditshah99/lnd/clock"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/htlcswitch"
+	"github.com/vanditshah99/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lnutils"
+	"github.com/vanditshah99/lnd/lnwallet"
+	"github.com/vanditshah99/lnd/lnwire"
+	"github.com/vanditshah99/lnd/record"
+	"github.com/vanditshah99/lnd/routing/route"
+	"github.com/vanditshah99/lnd/routing/shards"
+	"github.com/vanditshah99/lnd/tlv"
+	"github.com/vanditshah99/lnd/zpay32"
 )
 
 const (
@@ -1557,8 +1557,8 @@ func (r *ChannelRouter) resumePayments() error {
 //
 // NOTE: there's an unknown bug that caused the network result for a particular
 // attempt to NOT be saved, resulting a payment being stuck forever. More info:
-// - https://github.com/lightningnetwork/lnd/issues/8146
-// - https://github.com/lightningnetwork/lnd/pull/8174
+// - https://github.com/vanditshah99/lnd/issues/8146
+// - https://github.com/vanditshah99/lnd/pull/8174
 func (r *ChannelRouter) failStaleAttempt(a channeldb.HTLCAttempt,
 	payHash lntypes.Hash) {
 

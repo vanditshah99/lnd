@@ -6,7 +6,7 @@ import (
 	"math"
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/lightningnetwork/lnd/tlv"
+	"github.com/vanditshah99/lnd/tlv"
 )
 
 // QueryChannelRange is a message sent by a node in order to query the

@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lightningnetwork/lnd/fn"
-	"github.com/lightningnetwork/lnd/lnwallet/chainfee"
-	"github.com/lightningnetwork/lnd/lnwire"
+	"github.com/vanditshah99/lnd/fn"
+	"github.com/vanditshah99/lnd/lnwallet/chainfee"
+	"github.com/vanditshah99/lnd/lnwire"
 )
 
 var (
@@ -74,7 +74,7 @@ type FeeFunction interface {
 // The fee rate will be capped at endingFeeRate.
 //
 // TODO(yy): implement more functions specified here:
-// - https://github.com/lightningnetwork/lnd/issues/4215
+// - https://github.com/vanditshah99/lnd/issues/4215
 type LinearFeeFunction struct {
 	// startingFeeRate specifies the initial fee rate to begin with.
 	startingFeeRate chainfee.SatPerKWeight

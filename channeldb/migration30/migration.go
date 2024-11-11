@@ -7,10 +7,10 @@ import (
 	"math"
 	"sync"
 
-	mig24 "github.com/lightningnetwork/lnd/channeldb/migration24"
-	mig26 "github.com/lightningnetwork/lnd/channeldb/migration26"
-	mig "github.com/lightningnetwork/lnd/channeldb/migration_01_to_11"
-	"github.com/lightningnetwork/lnd/kvdb"
+	mig24 "github.com/vanditshah99/lnd/channeldb/migration24"
+	mig26 "github.com/vanditshah99/lnd/channeldb/migration26"
+	mig "github.com/vanditshah99/lnd/channeldb/migration_01_to_11"
+	"github.com/vanditshah99/lnd/kvdb"
 )
 
 // recordsPerTx specifies the number of records to be migrated in each database

@@ -8,8 +8,8 @@ import (
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr/musig2"
-	"github.com/lightningnetwork/lnd/internal/musig2v040"
-	"github.com/lightningnetwork/lnd/keychain"
+	"github.com/vanditshah99/lnd/internal/musig2v040"
+	"github.com/vanditshah99/lnd/keychain"
 )
 
 // MuSig2Version is a type that defines the different versions of the MuSig2

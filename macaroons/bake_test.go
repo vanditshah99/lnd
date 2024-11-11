@@ -5,8 +5,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/lightningnetwork/lnd/macaroons"
 	"github.com/stretchr/testify/require"
+	"github.com/vanditshah99/lnd/macaroons"
 	"google.golang.org/grpc/metadata"
 	"gopkg.in/macaroon-bakery.v2/bakery"
 )

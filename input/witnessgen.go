@@ -5,7 +5,7 @@ import (
 
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/lightningnetwork/lnd/lntypes"
+	"github.com/vanditshah99/lnd/lntypes"
 )
 
 // WitnessGenerator represents a function that is able to generate the final

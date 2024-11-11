@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/lightningnetwork/lnd/keychain"
+	"github.com/vanditshah99/lnd/keychain"
 )
 
 const (
