@@ -31,7 +31,7 @@ file in Python before you can use it to communicate with lnd.
   [lnrpc/lightning.proto](https://github.com/vanditshah99/lnd/blob/master/lnrpc/lightning.proto))
   or just download it
     ```shell
-    lnd $  curl -o lightning.proto -s https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/lightning.proto
+    lnd $  curl -o lightning.proto -s https://raw.githubusercontent.com/vanditshah99/lnd/master/lnrpc/lightning.proto
     ```
 6. Compile the proto file
     ```shell
@@ -52,7 +52,7 @@ extra steps (after completing all 6 step described above) to get the
 `router_pb2.py`, `router_pb2_grpc.py` and `router_pb2.pyi`:
 
 ```shell
-lnd $  curl -o router.proto -s https://raw.githubusercontent.com/lightningnetwork/lnd/master/lnrpc/routerrpc/router.proto
+lnd $  curl -o router.proto -s https://raw.githubusercontent.com/vanditshah99/lnd/master/lnrpc/routerrpc/router.proto
 lnd $  python -m grpc_tools.protoc --proto_path=googleapis:. --mypy_out=. --python_out=. --grpc_python_out=. router.proto
 ```
 
